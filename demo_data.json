@@ -122,42 +122,7 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "dcim",
-        "model": "devicebay"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "dcim",
-        "model": "frontport"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "dcim",
-        "model": "interfacetemplate"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "dcim",
-        "model": "consoleserverporttemplate"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "dcim",
-        "model": "consoleporttemplate"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "dcim",
-        "model": "virtualchassis"
+        "model": "frontporttemplate"
     }
 },
 {
@@ -171,42 +136,21 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "dcim",
+        "model": "inventoryitem"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "dcim",
+        "model": "manufacturer"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "dcim",
         "model": "devicetype"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "dcim",
-        "model": "poweroutlettemplate"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "dcim",
-        "model": "rearport"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "dcim",
-        "model": "frontporttemplate"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "dcim",
-        "model": "rackgroup"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "dcim",
-        "model": "rack"
     }
 },
 {
@@ -220,7 +164,91 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "dcim",
-        "model": "rackrole"
+        "model": "consoleporttemplate"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "dcim",
+        "model": "powerporttemplate"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "dcim",
+        "model": "rackgroup"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "dcim",
+        "model": "platform"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "dcim",
+        "model": "region"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "dcim",
+        "model": "rackreservation"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "dcim",
+        "model": "poweroutlettemplate"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "dcim",
+        "model": "virtualchassis"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "dcim",
+        "model": "frontport"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "dcim",
+        "model": "rearport"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "dcim",
+        "model": "device"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "dcim",
+        "model": "consoleserverporttemplate"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "dcim",
+        "model": "devicebay"
     }
 },
 {
@@ -241,56 +269,7 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "dcim",
-        "model": "region"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "dcim",
-        "model": "device"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "dcim",
-        "model": "manufacturer"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "dcim",
-        "model": "site"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "dcim",
-        "model": "inventoryitem"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "dcim",
-        "model": "platform"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "dcim",
-        "model": "rackreservation"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "dcim",
-        "model": "rearporttemplate"
+        "model": "rackrole"
     }
 },
 {
@@ -304,49 +283,28 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "dcim",
-        "model": "powerporttemplate"
+        "model": "interfacetemplate"
     }
 },
 {
     "model": "contenttypes.contenttype",
     "fields": {
-        "app_label": "ipam",
-        "model": "vlangroup"
+        "app_label": "dcim",
+        "model": "rack"
     }
 },
 {
     "model": "contenttypes.contenttype",
     "fields": {
-        "app_label": "ipam",
-        "model": "role"
+        "app_label": "dcim",
+        "model": "site"
     }
 },
 {
     "model": "contenttypes.contenttype",
     "fields": {
-        "app_label": "ipam",
-        "model": "service"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "ipam",
-        "model": "vrf"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "ipam",
-        "model": "vlan"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "ipam",
-        "model": "aggregate"
+        "app_label": "dcim",
+        "model": "rearporttemplate"
     }
 },
 {
@@ -360,7 +318,7 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "ipam",
-        "model": "prefix"
+        "model": "aggregate"
     }
 },
 {
@@ -368,6 +326,62 @@
     "fields": {
         "app_label": "ipam",
         "model": "rir"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "ipam",
+        "model": "vlan"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "ipam",
+        "model": "service"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "ipam",
+        "model": "role"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "ipam",
+        "model": "vrf"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "ipam",
+        "model": "vlangroup"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "ipam",
+        "model": "prefix"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "extras",
+        "model": "customlink"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "extras",
+        "model": "imageattachment"
     }
 },
 {
@@ -381,14 +395,28 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "extras",
-        "model": "customfield"
+        "model": "webhook"
     }
 },
 {
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "extras",
-        "model": "reportresult"
+        "model": "objectchange"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "extras",
+        "model": "taggeditem"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "extras",
+        "model": "customfield"
     }
 },
 {
@@ -402,7 +430,21 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "extras",
-        "model": "taggeditem"
+        "model": "customfieldchoice"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "extras",
+        "model": "reportresult"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "extras",
+        "model": "graph"
     }
 },
 {
@@ -423,49 +465,14 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "extras",
-        "model": "webhook"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "extras",
-        "model": "customlink"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "extras",
-        "model": "objectchange"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "extras",
-        "model": "customfieldchoice"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "extras",
         "model": "configcontext"
     }
 },
 {
     "model": "contenttypes.contenttype",
     "fields": {
-        "app_label": "extras",
-        "model": "graph"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "extras",
-        "model": "imageattachment"
+        "app_label": "secrets",
+        "model": "sessionkey"
     }
 },
 {
@@ -479,13 +486,6 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "secrets",
-        "model": "secret"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "secrets",
         "model": "secretrole"
     }
 },
@@ -493,14 +493,7 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "secrets",
-        "model": "sessionkey"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "tenancy",
-        "model": "tenant"
+        "model": "secret"
     }
 },
 {
@@ -508,6 +501,13 @@
     "fields": {
         "app_label": "tenancy",
         "model": "tenantgroup"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "tenancy",
+        "model": "tenant"
     }
 },
 {
@@ -521,7 +521,7 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "virtualization",
-        "model": "clustertype"
+        "model": "virtualmachine"
     }
 },
 {
@@ -535,14 +535,29 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "virtualization",
-        "model": "virtualmachine"
+        "model": "clustergroup"
     }
 },
 {
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "virtualization",
-        "model": "clustergroup"
+        "model": "clustertype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "extras",
+        "model": "script"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "izhtcph62died20lmt8ninhxps4rdao1",
+    "fields": {
+        "session_data": "MGI4OGFmYzU1ZjU3ZGZjNWRjOWIwYjlkZDIxZmMzOWFlNDJhZmExODp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoidXRpbGl0aWVzLmF1dGhfYmFja2VuZHMuVmlld0V4ZW1wdE1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaGFzaCI6IjA3NWMwZGNlMDAzZmFiZDc0MGFjYzljMjQ3NDRmMzM1NGM1ZjQwYzgifQ==",
+        "expire_date": "2019-09-19T19:47:57.782Z"
     }
 },
 {
@@ -1116,78 +1131,6 @@
     }
 },
 {
-    "model": "dcim.site",
-    "pk": 75,
-    "fields": {
-        "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.630Z",
-        "name": "DC East",
-        "slug": "dc-east",
-        "status": 1,
-        "region": null,
-        "tenant": null,
-        "facility": "",
-        "asn": null,
-        "time_zone": null,
-        "description": "",
-        "physical_address": "",
-        "shipping_address": "",
-        "latitude": null,
-        "longitude": null,
-        "contact_name": "",
-        "contact_phone": "",
-        "contact_email": "",
-        "comments": ""
-    }
-},
-{
-    "model": "dcim.site",
-    "pk": 76,
-    "fields": {
-        "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.635Z",
-        "name": "DC West",
-        "slug": "dc-west",
-        "status": 1,
-        "region": null,
-        "tenant": null,
-        "facility": "",
-        "asn": null,
-        "time_zone": null,
-        "description": "",
-        "physical_address": "",
-        "shipping_address": "",
-        "latitude": null,
-        "longitude": null,
-        "contact_name": "",
-        "contact_phone": "",
-        "contact_email": "",
-        "comments": ""
-    }
-},
-{
-    "model": "dcim.rackgroup",
-    "pk": 13,
-    "fields": {
-        "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.633Z",
-        "name": "Cage 1200",
-        "slug": "cage-1200",
-        "site": 75
-    }
-},
-{
-    "model": "dcim.rackgroup",
-    "pk": 14,
-    "fields": {
-        "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.637Z",
-        "name": "Cage 1430",
-        "slug": "cage-1430",
-        "site": 76
-    }
-},
-{
     "model": "dcim.rackrole",
     "pk": 19,
     "fields": {
@@ -1229,7 +1172,7 @@
         "name": "R101",
         "facility_id": "1200:0101",
         "site": 67,
-        "group": 13,
+        "group": null,
         "tenant": null,
         "status": 3,
         "role": 19,
@@ -1254,7 +1197,7 @@
         "name": "R102",
         "facility_id": "1200:0102",
         "site": 67,
-        "group": 13,
+        "group": null,
         "tenant": null,
         "status": 3,
         "role": 20,
@@ -1279,7 +1222,7 @@
         "name": "R103",
         "facility_id": "1200:0103",
         "site": 67,
-        "group": 13,
+        "group": null,
         "tenant": null,
         "status": 3,
         "role": 20,
@@ -1304,7 +1247,7 @@
         "name": "R104",
         "facility_id": "1200:0104",
         "site": 67,
-        "group": 13,
+        "group": null,
         "tenant": null,
         "status": 3,
         "role": 20,
@@ -1329,7 +1272,7 @@
         "name": "R201",
         "facility_id": "1200:0201",
         "site": 67,
-        "group": 13,
+        "group": null,
         "tenant": null,
         "status": 3,
         "role": 20,
@@ -1354,7 +1297,7 @@
         "name": "R202",
         "facility_id": "1200:0202",
         "site": 67,
-        "group": 13,
+        "group": null,
         "tenant": null,
         "status": 3,
         "role": 20,
@@ -1379,7 +1322,7 @@
         "name": "R203",
         "facility_id": "1200:0203",
         "site": 67,
-        "group": 13,
+        "group": null,
         "tenant": null,
         "status": 3,
         "role": 21,
@@ -1404,7 +1347,7 @@
         "name": "R204",
         "facility_id": "1200:0204",
         "site": 67,
-        "group": 13,
+        "group": null,
         "tenant": null,
         "status": 3,
         "role": 21,
@@ -1413,206 +1356,6 @@
         "type": null,
         "width": 19,
         "u_height": 48,
-        "desc_units": false,
-        "outer_width": null,
-        "outer_depth": null,
-        "outer_unit": null,
-        "comments": ""
-    }
-},
-{
-    "model": "dcim.rack",
-    "pk": 105,
-    "fields": {
-        "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.723Z",
-        "name": "R101",
-        "facility_id": "1430:0101",
-        "site": 76,
-        "group": 14,
-        "tenant": null,
-        "status": 3,
-        "role": 19,
-        "serial": "",
-        "asset_tag": null,
-        "type": null,
-        "width": 19,
-        "u_height": 42,
-        "desc_units": false,
-        "outer_width": null,
-        "outer_depth": null,
-        "outer_unit": null,
-        "comments": ""
-    }
-},
-{
-    "model": "dcim.rack",
-    "pk": 106,
-    "fields": {
-        "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.729Z",
-        "name": "R102",
-        "facility_id": "1430:0102",
-        "site": 76,
-        "group": 14,
-        "tenant": null,
-        "status": 3,
-        "role": 20,
-        "serial": "",
-        "asset_tag": null,
-        "type": null,
-        "width": 19,
-        "u_height": 42,
-        "desc_units": false,
-        "outer_width": null,
-        "outer_depth": null,
-        "outer_unit": null,
-        "comments": ""
-    }
-},
-{
-    "model": "dcim.rack",
-    "pk": 107,
-    "fields": {
-        "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.736Z",
-        "name": "R103",
-        "facility_id": "1430:0103",
-        "site": 76,
-        "group": 14,
-        "tenant": null,
-        "status": 3,
-        "role": 20,
-        "serial": "",
-        "asset_tag": null,
-        "type": null,
-        "width": 19,
-        "u_height": 42,
-        "desc_units": false,
-        "outer_width": null,
-        "outer_depth": null,
-        "outer_unit": null,
-        "comments": ""
-    }
-},
-{
-    "model": "dcim.rack",
-    "pk": 108,
-    "fields": {
-        "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.742Z",
-        "name": "R104",
-        "facility_id": "1430:0104",
-        "site": 76,
-        "group": 14,
-        "tenant": null,
-        "status": 3,
-        "role": 20,
-        "serial": "",
-        "asset_tag": null,
-        "type": null,
-        "width": 19,
-        "u_height": 42,
-        "desc_units": false,
-        "outer_width": null,
-        "outer_depth": null,
-        "outer_unit": null,
-        "comments": ""
-    }
-},
-{
-    "model": "dcim.rack",
-    "pk": 109,
-    "fields": {
-        "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.749Z",
-        "name": "R201",
-        "facility_id": "1430:0201",
-        "site": 76,
-        "group": 14,
-        "tenant": null,
-        "status": 3,
-        "role": 20,
-        "serial": "",
-        "asset_tag": null,
-        "type": null,
-        "width": 19,
-        "u_height": 42,
-        "desc_units": false,
-        "outer_width": null,
-        "outer_depth": null,
-        "outer_unit": null,
-        "comments": ""
-    }
-},
-{
-    "model": "dcim.rack",
-    "pk": 110,
-    "fields": {
-        "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.755Z",
-        "name": "R202",
-        "facility_id": "1430:0202",
-        "site": 76,
-        "group": 14,
-        "tenant": null,
-        "status": 3,
-        "role": 20,
-        "serial": "",
-        "asset_tag": null,
-        "type": null,
-        "width": 19,
-        "u_height": 42,
-        "desc_units": false,
-        "outer_width": null,
-        "outer_depth": null,
-        "outer_unit": null,
-        "comments": ""
-    }
-},
-{
-    "model": "dcim.rack",
-    "pk": 111,
-    "fields": {
-        "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.761Z",
-        "name": "R203",
-        "facility_id": "1430:0203",
-        "site": 76,
-        "group": 14,
-        "tenant": null,
-        "status": 3,
-        "role": 21,
-        "serial": "",
-        "asset_tag": null,
-        "type": null,
-        "width": 19,
-        "u_height": 42,
-        "desc_units": false,
-        "outer_width": null,
-        "outer_depth": null,
-        "outer_unit": null,
-        "comments": ""
-    }
-},
-{
-    "model": "dcim.rack",
-    "pk": 112,
-    "fields": {
-        "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.768Z",
-        "name": "R204",
-        "facility_id": "1430:0204",
-        "site": 76,
-        "group": 14,
-        "tenant": null,
-        "status": 3,
-        "role": 21,
-        "serial": "",
-        "asset_tag": null,
-        "type": null,
-        "width": 19,
-        "u_height": 42,
         "desc_units": false,
         "outer_width": null,
         "outer_depth": null,
@@ -3583,50 +3326,6 @@
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add group",
-        "content_type": [
-            "auth",
-            "group"
-        ],
-        "codename": "add_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change group",
-        "content_type": [
-            "auth",
-            "group"
-        ],
-        "codename": "change_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete group",
-        "content_type": [
-            "auth",
-            "group"
-        ],
-        "codename": "delete_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view group",
-        "content_type": [
-            "auth",
-            "group"
-        ],
-        "codename": "view_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
         "name": "Can add user",
         "content_type": [
             "auth",
@@ -3666,6 +3365,50 @@
             "user"
         ],
         "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "view_group"
     }
 },
 {
@@ -3891,6 +3634,50 @@
 {
     "model": "auth.permission",
     "fields": {
+        "name": "Can add provider",
+        "content_type": [
+            "circuits",
+            "provider"
+        ],
+        "codename": "add_provider"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change provider",
+        "content_type": [
+            "circuits",
+            "provider"
+        ],
+        "codename": "change_provider"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete provider",
+        "content_type": [
+            "circuits",
+            "provider"
+        ],
+        "codename": "delete_provider"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view provider",
+        "content_type": [
+            "circuits",
+            "provider"
+        ],
+        "codename": "view_provider"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
         "name": "Can add circuit termination",
         "content_type": [
             "circuits",
@@ -3930,50 +3717,6 @@
             "circuittermination"
         ],
         "codename": "view_circuittermination"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add circuit type",
-        "content_type": [
-            "circuits",
-            "circuittype"
-        ],
-        "codename": "add_circuittype"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change circuit type",
-        "content_type": [
-            "circuits",
-            "circuittype"
-        ],
-        "codename": "change_circuittype"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete circuit type",
-        "content_type": [
-            "circuits",
-            "circuittype"
-        ],
-        "codename": "delete_circuittype"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view circuit type",
-        "content_type": [
-            "circuits",
-            "circuittype"
-        ],
-        "codename": "view_circuittype"
     }
 },
 {
@@ -4023,309 +3766,177 @@
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add provider",
+        "name": "Can add circuit type",
         "content_type": [
             "circuits",
-            "provider"
+            "circuittype"
         ],
-        "codename": "add_provider"
+        "codename": "add_circuittype"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change provider",
+        "name": "Can change circuit type",
         "content_type": [
             "circuits",
-            "provider"
+            "circuittype"
         ],
-        "codename": "change_provider"
+        "codename": "change_circuittype"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete provider",
+        "name": "Can delete circuit type",
         "content_type": [
             "circuits",
-            "provider"
+            "circuittype"
         ],
-        "codename": "delete_provider"
+        "codename": "delete_circuittype"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view provider",
+        "name": "Can view circuit type",
         "content_type": [
             "circuits",
-            "provider"
+            "circuittype"
         ],
-        "codename": "view_provider"
+        "codename": "view_circuittype"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add platform",
+        "name": "Can add cable",
         "content_type": [
             "dcim",
-            "platform"
+            "cable"
         ],
-        "codename": "add_platform"
+        "codename": "add_cable"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change platform",
+        "name": "Can change cable",
         "content_type": [
             "dcim",
-            "platform"
+            "cable"
         ],
-        "codename": "change_platform"
+        "codename": "change_cable"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete platform",
+        "name": "Can delete cable",
         "content_type": [
             "dcim",
-            "platform"
+            "cable"
         ],
-        "codename": "delete_platform"
+        "codename": "delete_cable"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view platform",
+        "name": "Can view cable",
         "content_type": [
             "dcim",
-            "platform"
+            "cable"
         ],
-        "codename": "view_platform"
+        "codename": "view_cable"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add device role",
+        "name": "Can add power outlet template",
         "content_type": [
             "dcim",
-            "devicerole"
+            "poweroutlettemplate"
         ],
-        "codename": "add_devicerole"
+        "codename": "add_poweroutlettemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change device role",
+        "name": "Can change power outlet template",
         "content_type": [
             "dcim",
-            "devicerole"
+            "poweroutlettemplate"
         ],
-        "codename": "change_devicerole"
+        "codename": "change_poweroutlettemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete device role",
+        "name": "Can delete power outlet template",
         "content_type": [
             "dcim",
-            "devicerole"
+            "poweroutlettemplate"
         ],
-        "codename": "delete_devicerole"
+        "codename": "delete_poweroutlettemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view device role",
+        "name": "Can view power outlet template",
         "content_type": [
             "dcim",
-            "devicerole"
+            "poweroutlettemplate"
         ],
-        "codename": "view_devicerole"
+        "codename": "view_poweroutlettemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add front port template",
+        "name": "Can add front port",
         "content_type": [
             "dcim",
-            "frontporttemplate"
+            "frontport"
         ],
-        "codename": "add_frontporttemplate"
+        "codename": "add_frontport"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change front port template",
+        "name": "Can change front port",
         "content_type": [
             "dcim",
-            "frontporttemplate"
+            "frontport"
         ],
-        "codename": "change_frontporttemplate"
+        "codename": "change_frontport"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete front port template",
+        "name": "Can delete front port",
         "content_type": [
             "dcim",
-            "frontporttemplate"
+            "frontport"
         ],
-        "codename": "delete_frontporttemplate"
+        "codename": "delete_frontport"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view front port template",
+        "name": "Can view front port",
         "content_type": [
             "dcim",
-            "frontporttemplate"
+            "frontport"
         ],
-        "codename": "view_frontporttemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add virtual chassis",
-        "content_type": [
-            "dcim",
-            "virtualchassis"
-        ],
-        "codename": "add_virtualchassis"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change virtual chassis",
-        "content_type": [
-            "dcim",
-            "virtualchassis"
-        ],
-        "codename": "change_virtualchassis"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete virtual chassis",
-        "content_type": [
-            "dcim",
-            "virtualchassis"
-        ],
-        "codename": "delete_virtualchassis"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view virtual chassis",
-        "content_type": [
-            "dcim",
-            "virtualchassis"
-        ],
-        "codename": "view_virtualchassis"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add rear port template",
-        "content_type": [
-            "dcim",
-            "rearporttemplate"
-        ],
-        "codename": "add_rearporttemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change rear port template",
-        "content_type": [
-            "dcim",
-            "rearporttemplate"
-        ],
-        "codename": "change_rearporttemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete rear port template",
-        "content_type": [
-            "dcim",
-            "rearporttemplate"
-        ],
-        "codename": "delete_rearporttemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view rear port template",
-        "content_type": [
-            "dcim",
-            "rearporttemplate"
-        ],
-        "codename": "view_rearporttemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add site",
-        "content_type": [
-            "dcim",
-            "site"
-        ],
-        "codename": "add_site"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change site",
-        "content_type": [
-            "dcim",
-            "site"
-        ],
-        "codename": "change_site"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete site",
-        "content_type": [
-            "dcim",
-            "site"
-        ],
-        "codename": "delete_site"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view site",
-        "content_type": [
-            "dcim",
-            "site"
-        ],
-        "codename": "view_site"
+        "codename": "view_frontport"
     }
 },
 {
@@ -4375,89 +3986,177 @@
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add region",
+        "name": "Can add rack group",
         "content_type": [
             "dcim",
-            "region"
+            "rackgroup"
         ],
-        "codename": "add_region"
+        "codename": "add_rackgroup"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change region",
+        "name": "Can change rack group",
         "content_type": [
             "dcim",
-            "region"
+            "rackgroup"
         ],
-        "codename": "change_region"
+        "codename": "change_rackgroup"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete region",
+        "name": "Can delete rack group",
         "content_type": [
             "dcim",
-            "region"
+            "rackgroup"
         ],
-        "codename": "delete_region"
+        "codename": "delete_rackgroup"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view region",
+        "name": "Can view rack group",
         "content_type": [
             "dcim",
-            "region"
+            "rackgroup"
         ],
-        "codename": "view_region"
+        "codename": "view_rackgroup"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add console server port template",
+        "name": "Can add interface template",
         "content_type": [
             "dcim",
-            "consoleserverporttemplate"
+            "interfacetemplate"
         ],
-        "codename": "add_consoleserverporttemplate"
+        "codename": "add_interfacetemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change console server port template",
+        "name": "Can change interface template",
         "content_type": [
             "dcim",
-            "consoleserverporttemplate"
+            "interfacetemplate"
         ],
-        "codename": "change_consoleserverporttemplate"
+        "codename": "change_interfacetemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete console server port template",
+        "name": "Can delete interface template",
         "content_type": [
             "dcim",
-            "consoleserverporttemplate"
+            "interfacetemplate"
         ],
-        "codename": "delete_consoleserverporttemplate"
+        "codename": "delete_interfacetemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view console server port template",
+        "name": "Can view interface template",
         "content_type": [
             "dcim",
-            "consoleserverporttemplate"
+            "interfacetemplate"
         ],
-        "codename": "view_consoleserverporttemplate"
+        "codename": "view_interfacetemplate"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add platform",
+        "content_type": [
+            "dcim",
+            "platform"
+        ],
+        "codename": "add_platform"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change platform",
+        "content_type": [
+            "dcim",
+            "platform"
+        ],
+        "codename": "change_platform"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete platform",
+        "content_type": [
+            "dcim",
+            "platform"
+        ],
+        "codename": "delete_platform"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view platform",
+        "content_type": [
+            "dcim",
+            "platform"
+        ],
+        "codename": "view_platform"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add device bay",
+        "content_type": [
+            "dcim",
+            "devicebay"
+        ],
+        "codename": "add_devicebay"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change device bay",
+        "content_type": [
+            "dcim",
+            "devicebay"
+        ],
+        "codename": "change_devicebay"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete device bay",
+        "content_type": [
+            "dcim",
+            "devicebay"
+        ],
+        "codename": "delete_devicebay"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view device bay",
+        "content_type": [
+            "dcim",
+            "devicebay"
+        ],
+        "codename": "view_devicebay"
     }
 },
 {
@@ -4507,89 +4206,133 @@
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add power outlet",
+        "name": "Can add rack",
         "content_type": [
             "dcim",
-            "poweroutlet"
+            "rack"
         ],
-        "codename": "add_poweroutlet"
+        "codename": "add_rack"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change power outlet",
+        "name": "Can change rack",
         "content_type": [
             "dcim",
-            "poweroutlet"
+            "rack"
         ],
-        "codename": "change_poweroutlet"
+        "codename": "change_rack"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete power outlet",
+        "name": "Can delete rack",
         "content_type": [
             "dcim",
-            "poweroutlet"
+            "rack"
         ],
-        "codename": "delete_poweroutlet"
+        "codename": "delete_rack"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view power outlet",
+        "name": "Can view rack",
         "content_type": [
             "dcim",
-            "poweroutlet"
+            "rack"
         ],
-        "codename": "view_poweroutlet"
+        "codename": "view_rack"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add power feed",
+        "name": "Can add rack role",
         "content_type": [
             "dcim",
-            "powerfeed"
+            "rackrole"
         ],
-        "codename": "add_powerfeed"
+        "codename": "add_rackrole"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change power feed",
+        "name": "Can change rack role",
         "content_type": [
             "dcim",
-            "powerfeed"
+            "rackrole"
         ],
-        "codename": "change_powerfeed"
+        "codename": "change_rackrole"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete power feed",
+        "name": "Can delete rack role",
         "content_type": [
             "dcim",
-            "powerfeed"
+            "rackrole"
         ],
-        "codename": "delete_powerfeed"
+        "codename": "delete_rackrole"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view power feed",
+        "name": "Can view rack role",
         "content_type": [
             "dcim",
-            "powerfeed"
+            "rackrole"
         ],
-        "codename": "view_powerfeed"
+        "codename": "view_rackrole"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add front port template",
+        "content_type": [
+            "dcim",
+            "frontporttemplate"
+        ],
+        "codename": "add_frontporttemplate"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change front port template",
+        "content_type": [
+            "dcim",
+            "frontporttemplate"
+        ],
+        "codename": "change_frontporttemplate"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete front port template",
+        "content_type": [
+            "dcim",
+            "frontporttemplate"
+        ],
+        "codename": "delete_frontporttemplate"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view front port template",
+        "content_type": [
+            "dcim",
+            "frontporttemplate"
+        ],
+        "codename": "view_frontporttemplate"
     }
 },
 {
@@ -4683,6 +4426,138 @@
 {
     "model": "auth.permission",
     "fields": {
+        "name": "Can add region",
+        "content_type": [
+            "dcim",
+            "region"
+        ],
+        "codename": "add_region"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change region",
+        "content_type": [
+            "dcim",
+            "region"
+        ],
+        "codename": "change_region"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete region",
+        "content_type": [
+            "dcim",
+            "region"
+        ],
+        "codename": "delete_region"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view region",
+        "content_type": [
+            "dcim",
+            "region"
+        ],
+        "codename": "view_region"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add device bay template",
+        "content_type": [
+            "dcim",
+            "devicebaytemplate"
+        ],
+        "codename": "add_devicebaytemplate"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change device bay template",
+        "content_type": [
+            "dcim",
+            "devicebaytemplate"
+        ],
+        "codename": "change_devicebaytemplate"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete device bay template",
+        "content_type": [
+            "dcim",
+            "devicebaytemplate"
+        ],
+        "codename": "delete_devicebaytemplate"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view device bay template",
+        "content_type": [
+            "dcim",
+            "devicebaytemplate"
+        ],
+        "codename": "view_devicebaytemplate"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add power panel",
+        "content_type": [
+            "dcim",
+            "powerpanel"
+        ],
+        "codename": "add_powerpanel"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change power panel",
+        "content_type": [
+            "dcim",
+            "powerpanel"
+        ],
+        "codename": "change_powerpanel"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete power panel",
+        "content_type": [
+            "dcim",
+            "powerpanel"
+        ],
+        "codename": "delete_powerpanel"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view power panel",
+        "content_type": [
+            "dcim",
+            "powerpanel"
+        ],
+        "codename": "view_powerpanel"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
         "name": "Can add rear port",
         "content_type": [
             "dcim",
@@ -4722,6 +4597,138 @@
             "rearport"
         ],
         "codename": "view_rearport"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add virtual chassis",
+        "content_type": [
+            "dcim",
+            "virtualchassis"
+        ],
+        "codename": "add_virtualchassis"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change virtual chassis",
+        "content_type": [
+            "dcim",
+            "virtualchassis"
+        ],
+        "codename": "change_virtualchassis"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete virtual chassis",
+        "content_type": [
+            "dcim",
+            "virtualchassis"
+        ],
+        "codename": "delete_virtualchassis"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view virtual chassis",
+        "content_type": [
+            "dcim",
+            "virtualchassis"
+        ],
+        "codename": "view_virtualchassis"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add console server port template",
+        "content_type": [
+            "dcim",
+            "consoleserverporttemplate"
+        ],
+        "codename": "add_consoleserverporttemplate"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change console server port template",
+        "content_type": [
+            "dcim",
+            "consoleserverporttemplate"
+        ],
+        "codename": "change_consoleserverporttemplate"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete console server port template",
+        "content_type": [
+            "dcim",
+            "consoleserverporttemplate"
+        ],
+        "codename": "delete_consoleserverporttemplate"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view console server port template",
+        "content_type": [
+            "dcim",
+            "consoleserverporttemplate"
+        ],
+        "codename": "view_consoleserverporttemplate"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add power outlet",
+        "content_type": [
+            "dcim",
+            "poweroutlet"
+        ],
+        "codename": "add_poweroutlet"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change power outlet",
+        "content_type": [
+            "dcim",
+            "poweroutlet"
+        ],
+        "codename": "change_poweroutlet"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete power outlet",
+        "content_type": [
+            "dcim",
+            "poweroutlet"
+        ],
+        "codename": "delete_poweroutlet"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view power outlet",
+        "content_type": [
+            "dcim",
+            "poweroutlet"
+        ],
+        "codename": "view_poweroutlet"
     }
 },
 {
@@ -4793,441 +4800,45 @@
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add power panel",
+        "name": "Can add site",
         "content_type": [
             "dcim",
-            "powerpanel"
+            "site"
         ],
-        "codename": "add_powerpanel"
+        "codename": "add_site"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change power panel",
+        "name": "Can change site",
         "content_type": [
             "dcim",
-            "powerpanel"
+            "site"
         ],
-        "codename": "change_powerpanel"
+        "codename": "change_site"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete power panel",
+        "name": "Can delete site",
         "content_type": [
             "dcim",
-            "powerpanel"
+            "site"
         ],
-        "codename": "delete_powerpanel"
+        "codename": "delete_site"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view power panel",
+        "name": "Can view site",
         "content_type": [
             "dcim",
-            "powerpanel"
+            "site"
         ],
-        "codename": "view_powerpanel"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add interface template",
-        "content_type": [
-            "dcim",
-            "interfacetemplate"
-        ],
-        "codename": "add_interfacetemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change interface template",
-        "content_type": [
-            "dcim",
-            "interfacetemplate"
-        ],
-        "codename": "change_interfacetemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete interface template",
-        "content_type": [
-            "dcim",
-            "interfacetemplate"
-        ],
-        "codename": "delete_interfacetemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view interface template",
-        "content_type": [
-            "dcim",
-            "interfacetemplate"
-        ],
-        "codename": "view_interfacetemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add power port",
-        "content_type": [
-            "dcim",
-            "powerport"
-        ],
-        "codename": "add_powerport"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change power port",
-        "content_type": [
-            "dcim",
-            "powerport"
-        ],
-        "codename": "change_powerport"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete power port",
-        "content_type": [
-            "dcim",
-            "powerport"
-        ],
-        "codename": "delete_powerport"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view power port",
-        "content_type": [
-            "dcim",
-            "powerport"
-        ],
-        "codename": "view_powerport"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add console port template",
-        "content_type": [
-            "dcim",
-            "consoleporttemplate"
-        ],
-        "codename": "add_consoleporttemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change console port template",
-        "content_type": [
-            "dcim",
-            "consoleporttemplate"
-        ],
-        "codename": "change_consoleporttemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete console port template",
-        "content_type": [
-            "dcim",
-            "consoleporttemplate"
-        ],
-        "codename": "delete_consoleporttemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view console port template",
-        "content_type": [
-            "dcim",
-            "consoleporttemplate"
-        ],
-        "codename": "view_consoleporttemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add device type",
-        "content_type": [
-            "dcim",
-            "devicetype"
-        ],
-        "codename": "add_devicetype"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change device type",
-        "content_type": [
-            "dcim",
-            "devicetype"
-        ],
-        "codename": "change_devicetype"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete device type",
-        "content_type": [
-            "dcim",
-            "devicetype"
-        ],
-        "codename": "delete_devicetype"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view device type",
-        "content_type": [
-            "dcim",
-            "devicetype"
-        ],
-        "codename": "view_devicetype"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add front port",
-        "content_type": [
-            "dcim",
-            "frontport"
-        ],
-        "codename": "add_frontport"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change front port",
-        "content_type": [
-            "dcim",
-            "frontport"
-        ],
-        "codename": "change_frontport"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete front port",
-        "content_type": [
-            "dcim",
-            "frontport"
-        ],
-        "codename": "delete_frontport"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view front port",
-        "content_type": [
-            "dcim",
-            "frontport"
-        ],
-        "codename": "view_frontport"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add power port template",
-        "content_type": [
-            "dcim",
-            "powerporttemplate"
-        ],
-        "codename": "add_powerporttemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change power port template",
-        "content_type": [
-            "dcim",
-            "powerporttemplate"
-        ],
-        "codename": "change_powerporttemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete power port template",
-        "content_type": [
-            "dcim",
-            "powerporttemplate"
-        ],
-        "codename": "delete_powerporttemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view power port template",
-        "content_type": [
-            "dcim",
-            "powerporttemplate"
-        ],
-        "codename": "view_powerporttemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add console server port",
-        "content_type": [
-            "dcim",
-            "consoleserverport"
-        ],
-        "codename": "add_consoleserverport"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change console server port",
-        "content_type": [
-            "dcim",
-            "consoleserverport"
-        ],
-        "codename": "change_consoleserverport"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete console server port",
-        "content_type": [
-            "dcim",
-            "consoleserverport"
-        ],
-        "codename": "delete_consoleserverport"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view console server port",
-        "content_type": [
-            "dcim",
-            "consoleserverport"
-        ],
-        "codename": "view_consoleserverport"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add rack group",
-        "content_type": [
-            "dcim",
-            "rackgroup"
-        ],
-        "codename": "add_rackgroup"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change rack group",
-        "content_type": [
-            "dcim",
-            "rackgroup"
-        ],
-        "codename": "change_rackgroup"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete rack group",
-        "content_type": [
-            "dcim",
-            "rackgroup"
-        ],
-        "codename": "delete_rackgroup"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view rack group",
-        "content_type": [
-            "dcim",
-            "rackgroup"
-        ],
-        "codename": "view_rackgroup"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add power outlet template",
-        "content_type": [
-            "dcim",
-            "poweroutlettemplate"
-        ],
-        "codename": "add_poweroutlettemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change power outlet template",
-        "content_type": [
-            "dcim",
-            "poweroutlettemplate"
-        ],
-        "codename": "change_poweroutlettemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete power outlet template",
-        "content_type": [
-            "dcim",
-            "poweroutlettemplate"
-        ],
-        "codename": "delete_poweroutlettemplate"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view power outlet template",
-        "content_type": [
-            "dcim",
-            "poweroutlettemplate"
-        ],
-        "codename": "view_poweroutlettemplate"
+        "codename": "view_site"
     }
 },
 {
@@ -5277,221 +4888,397 @@
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add rack",
+        "name": "Can add device type",
         "content_type": [
             "dcim",
-            "rack"
+            "devicetype"
         ],
-        "codename": "add_rack"
+        "codename": "add_devicetype"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change rack",
+        "name": "Can change device type",
         "content_type": [
             "dcim",
-            "rack"
+            "devicetype"
         ],
-        "codename": "change_rack"
+        "codename": "change_devicetype"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete rack",
+        "name": "Can delete device type",
         "content_type": [
             "dcim",
-            "rack"
+            "devicetype"
         ],
-        "codename": "delete_rack"
+        "codename": "delete_devicetype"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view rack",
+        "name": "Can view device type",
         "content_type": [
             "dcim",
-            "rack"
+            "devicetype"
         ],
-        "codename": "view_rack"
+        "codename": "view_devicetype"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add device bay template",
+        "name": "Can add power port template",
         "content_type": [
             "dcim",
-            "devicebaytemplate"
+            "powerporttemplate"
         ],
-        "codename": "add_devicebaytemplate"
+        "codename": "add_powerporttemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change device bay template",
+        "name": "Can change power port template",
         "content_type": [
             "dcim",
-            "devicebaytemplate"
+            "powerporttemplate"
         ],
-        "codename": "change_devicebaytemplate"
+        "codename": "change_powerporttemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete device bay template",
+        "name": "Can delete power port template",
         "content_type": [
             "dcim",
-            "devicebaytemplate"
+            "powerporttemplate"
         ],
-        "codename": "delete_devicebaytemplate"
+        "codename": "delete_powerporttemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view device bay template",
+        "name": "Can view power port template",
         "content_type": [
             "dcim",
-            "devicebaytemplate"
+            "powerporttemplate"
         ],
-        "codename": "view_devicebaytemplate"
+        "codename": "view_powerporttemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add cable",
+        "name": "Can add console port template",
         "content_type": [
             "dcim",
-            "cable"
+            "consoleporttemplate"
         ],
-        "codename": "add_cable"
+        "codename": "add_consoleporttemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change cable",
+        "name": "Can change console port template",
         "content_type": [
             "dcim",
-            "cable"
+            "consoleporttemplate"
         ],
-        "codename": "change_cable"
+        "codename": "change_consoleporttemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete cable",
+        "name": "Can delete console port template",
         "content_type": [
             "dcim",
-            "cable"
+            "consoleporttemplate"
         ],
-        "codename": "delete_cable"
+        "codename": "delete_consoleporttemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view cable",
+        "name": "Can view console port template",
         "content_type": [
             "dcim",
-            "cable"
+            "consoleporttemplate"
         ],
-        "codename": "view_cable"
+        "codename": "view_consoleporttemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add rack role",
+        "name": "Can add device role",
         "content_type": [
             "dcim",
-            "rackrole"
+            "devicerole"
         ],
-        "codename": "add_rackrole"
+        "codename": "add_devicerole"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change rack role",
+        "name": "Can change device role",
         "content_type": [
             "dcim",
-            "rackrole"
+            "devicerole"
         ],
-        "codename": "change_rackrole"
+        "codename": "change_devicerole"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete rack role",
+        "name": "Can delete device role",
         "content_type": [
             "dcim",
-            "rackrole"
+            "devicerole"
         ],
-        "codename": "delete_rackrole"
+        "codename": "delete_devicerole"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view rack role",
+        "name": "Can view device role",
         "content_type": [
             "dcim",
-            "rackrole"
+            "devicerole"
         ],
-        "codename": "view_rackrole"
+        "codename": "view_devicerole"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add device bay",
+        "name": "Can add power feed",
         "content_type": [
             "dcim",
-            "devicebay"
+            "powerfeed"
         ],
-        "codename": "add_devicebay"
+        "codename": "add_powerfeed"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change device bay",
+        "name": "Can change power feed",
         "content_type": [
             "dcim",
-            "devicebay"
+            "powerfeed"
         ],
-        "codename": "change_devicebay"
+        "codename": "change_powerfeed"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete device bay",
+        "name": "Can delete power feed",
         "content_type": [
             "dcim",
-            "devicebay"
+            "powerfeed"
         ],
-        "codename": "delete_devicebay"
+        "codename": "delete_powerfeed"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view device bay",
+        "name": "Can view power feed",
         "content_type": [
             "dcim",
-            "devicebay"
+            "powerfeed"
         ],
-        "codename": "view_devicebay"
+        "codename": "view_powerfeed"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add power port",
+        "content_type": [
+            "dcim",
+            "powerport"
+        ],
+        "codename": "add_powerport"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change power port",
+        "content_type": [
+            "dcim",
+            "powerport"
+        ],
+        "codename": "change_powerport"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete power port",
+        "content_type": [
+            "dcim",
+            "powerport"
+        ],
+        "codename": "delete_powerport"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view power port",
+        "content_type": [
+            "dcim",
+            "powerport"
+        ],
+        "codename": "view_powerport"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add rear port template",
+        "content_type": [
+            "dcim",
+            "rearporttemplate"
+        ],
+        "codename": "add_rearporttemplate"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change rear port template",
+        "content_type": [
+            "dcim",
+            "rearporttemplate"
+        ],
+        "codename": "change_rearporttemplate"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete rear port template",
+        "content_type": [
+            "dcim",
+            "rearporttemplate"
+        ],
+        "codename": "delete_rearporttemplate"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view rear port template",
+        "content_type": [
+            "dcim",
+            "rearporttemplate"
+        ],
+        "codename": "view_rearporttemplate"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add console server port",
+        "content_type": [
+            "dcim",
+            "consoleserverport"
+        ],
+        "codename": "add_consoleserverport"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change console server port",
+        "content_type": [
+            "dcim",
+            "consoleserverport"
+        ],
+        "codename": "change_consoleserverport"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete console server port",
+        "content_type": [
+            "dcim",
+            "consoleserverport"
+        ],
+        "codename": "delete_consoleserverport"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view console server port",
+        "content_type": [
+            "dcim",
+            "consoleserverport"
+        ],
+        "codename": "view_consoleserverport"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add role",
+        "content_type": [
+            "ipam",
+            "role"
+        ],
+        "codename": "add_role"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change role",
+        "content_type": [
+            "ipam",
+            "role"
+        ],
+        "codename": "change_role"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete role",
+        "content_type": [
+            "ipam",
+            "role"
+        ],
+        "codename": "delete_role"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view role",
+        "content_type": [
+            "ipam",
+            "role"
+        ],
+        "codename": "view_role"
     }
 },
 {
@@ -5585,45 +5372,45 @@
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add aggregate",
+        "name": "Can add VLAN",
         "content_type": [
             "ipam",
-            "aggregate"
+            "vlan"
         ],
-        "codename": "add_aggregate"
+        "codename": "add_vlan"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change aggregate",
+        "name": "Can change VLAN",
         "content_type": [
             "ipam",
-            "aggregate"
+            "vlan"
         ],
-        "codename": "change_aggregate"
+        "codename": "change_vlan"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete aggregate",
+        "name": "Can delete VLAN",
         "content_type": [
             "ipam",
-            "aggregate"
+            "vlan"
         ],
-        "codename": "delete_aggregate"
+        "codename": "delete_vlan"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view aggregate",
+        "name": "Can view VLAN",
         "content_type": [
             "ipam",
-            "aggregate"
+            "vlan"
         ],
-        "codename": "view_aggregate"
+        "codename": "view_vlan"
     }
 },
 {
@@ -5673,50 +5460,6 @@
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add prefix",
-        "content_type": [
-            "ipam",
-            "prefix"
-        ],
-        "codename": "add_prefix"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change prefix",
-        "content_type": [
-            "ipam",
-            "prefix"
-        ],
-        "codename": "change_prefix"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete prefix",
-        "content_type": [
-            "ipam",
-            "prefix"
-        ],
-        "codename": "delete_prefix"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view prefix",
-        "content_type": [
-            "ipam",
-            "prefix"
-        ],
-        "codename": "view_prefix"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
         "name": "Can add RIR",
         "content_type": [
             "ipam",
@@ -5756,94 +5499,6 @@
             "rir"
         ],
         "codename": "view_rir"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add role",
-        "content_type": [
-            "ipam",
-            "role"
-        ],
-        "codename": "add_role"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change role",
-        "content_type": [
-            "ipam",
-            "role"
-        ],
-        "codename": "change_role"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete role",
-        "content_type": [
-            "ipam",
-            "role"
-        ],
-        "codename": "delete_role"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view role",
-        "content_type": [
-            "ipam",
-            "role"
-        ],
-        "codename": "view_role"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add VLAN",
-        "content_type": [
-            "ipam",
-            "vlan"
-        ],
-        "codename": "add_vlan"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change VLAN",
-        "content_type": [
-            "ipam",
-            "vlan"
-        ],
-        "codename": "change_vlan"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete VLAN",
-        "content_type": [
-            "ipam",
-            "vlan"
-        ],
-        "codename": "delete_vlan"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view VLAN",
-        "content_type": [
-            "ipam",
-            "vlan"
-        ],
-        "codename": "view_vlan"
     }
 },
 {
@@ -5893,353 +5548,89 @@
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add custom field",
+        "name": "Can add aggregate",
         "content_type": [
-            "extras",
-            "customfield"
+            "ipam",
+            "aggregate"
         ],
-        "codename": "add_customfield"
+        "codename": "add_aggregate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change custom field",
+        "name": "Can change aggregate",
         "content_type": [
-            "extras",
-            "customfield"
+            "ipam",
+            "aggregate"
         ],
-        "codename": "change_customfield"
+        "codename": "change_aggregate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete custom field",
+        "name": "Can delete aggregate",
         "content_type": [
-            "extras",
-            "customfield"
+            "ipam",
+            "aggregate"
         ],
-        "codename": "delete_customfield"
+        "codename": "delete_aggregate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view custom field",
+        "name": "Can view aggregate",
         "content_type": [
-            "extras",
-            "customfield"
+            "ipam",
+            "aggregate"
         ],
-        "codename": "view_customfield"
+        "codename": "view_aggregate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add custom field value",
+        "name": "Can add prefix",
         "content_type": [
-            "extras",
-            "customfieldvalue"
+            "ipam",
+            "prefix"
         ],
-        "codename": "add_customfieldvalue"
+        "codename": "add_prefix"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change custom field value",
+        "name": "Can change prefix",
         "content_type": [
-            "extras",
-            "customfieldvalue"
+            "ipam",
+            "prefix"
         ],
-        "codename": "change_customfieldvalue"
+        "codename": "change_prefix"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete custom field value",
+        "name": "Can delete prefix",
         "content_type": [
-            "extras",
-            "customfieldvalue"
+            "ipam",
+            "prefix"
         ],
-        "codename": "delete_customfieldvalue"
+        "codename": "delete_prefix"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view custom field value",
+        "name": "Can view prefix",
         "content_type": [
-            "extras",
-            "customfieldvalue"
+            "ipam",
+            "prefix"
         ],
-        "codename": "view_customfieldvalue"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add custom link",
-        "content_type": [
-            "extras",
-            "customlink"
-        ],
-        "codename": "add_customlink"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change custom link",
-        "content_type": [
-            "extras",
-            "customlink"
-        ],
-        "codename": "change_customlink"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete custom link",
-        "content_type": [
-            "extras",
-            "customlink"
-        ],
-        "codename": "delete_customlink"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view custom link",
-        "content_type": [
-            "extras",
-            "customlink"
-        ],
-        "codename": "view_customlink"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add custom field choice",
-        "content_type": [
-            "extras",
-            "customfieldchoice"
-        ],
-        "codename": "add_customfieldchoice"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change custom field choice",
-        "content_type": [
-            "extras",
-            "customfieldchoice"
-        ],
-        "codename": "change_customfieldchoice"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete custom field choice",
-        "content_type": [
-            "extras",
-            "customfieldchoice"
-        ],
-        "codename": "delete_customfieldchoice"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view custom field choice",
-        "content_type": [
-            "extras",
-            "customfieldchoice"
-        ],
-        "codename": "view_customfieldchoice"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add webhook",
-        "content_type": [
-            "extras",
-            "webhook"
-        ],
-        "codename": "add_webhook"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change webhook",
-        "content_type": [
-            "extras",
-            "webhook"
-        ],
-        "codename": "change_webhook"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete webhook",
-        "content_type": [
-            "extras",
-            "webhook"
-        ],
-        "codename": "delete_webhook"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view webhook",
-        "content_type": [
-            "extras",
-            "webhook"
-        ],
-        "codename": "view_webhook"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add report result",
-        "content_type": [
-            "extras",
-            "reportresult"
-        ],
-        "codename": "add_reportresult"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change report result",
-        "content_type": [
-            "extras",
-            "reportresult"
-        ],
-        "codename": "change_reportresult"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete report result",
-        "content_type": [
-            "extras",
-            "reportresult"
-        ],
-        "codename": "delete_reportresult"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view report result",
-        "content_type": [
-            "extras",
-            "reportresult"
-        ],
-        "codename": "view_reportresult"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add object change",
-        "content_type": [
-            "extras",
-            "objectchange"
-        ],
-        "codename": "add_objectchange"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change object change",
-        "content_type": [
-            "extras",
-            "objectchange"
-        ],
-        "codename": "change_objectchange"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete object change",
-        "content_type": [
-            "extras",
-            "objectchange"
-        ],
-        "codename": "delete_objectchange"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view object change",
-        "content_type": [
-            "extras",
-            "objectchange"
-        ],
-        "codename": "view_objectchange"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add config context",
-        "content_type": [
-            "extras",
-            "configcontext"
-        ],
-        "codename": "add_configcontext"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change config context",
-        "content_type": [
-            "extras",
-            "configcontext"
-        ],
-        "codename": "change_configcontext"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete config context",
-        "content_type": [
-            "extras",
-            "configcontext"
-        ],
-        "codename": "delete_configcontext"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view config context",
-        "content_type": [
-            "extras",
-            "configcontext"
-        ],
-        "codename": "view_configcontext"
+        "codename": "view_prefix"
     }
 },
 {
@@ -6289,89 +5680,309 @@
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add export template",
+        "name": "Can add image attachment",
         "content_type": [
             "extras",
-            "exporttemplate"
+            "imageattachment"
         ],
-        "codename": "add_exporttemplate"
+        "codename": "add_imageattachment"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change export template",
+        "name": "Can change image attachment",
         "content_type": [
             "extras",
-            "exporttemplate"
+            "imageattachment"
         ],
-        "codename": "change_exporttemplate"
+        "codename": "change_imageattachment"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete export template",
+        "name": "Can delete image attachment",
         "content_type": [
             "extras",
-            "exporttemplate"
+            "imageattachment"
         ],
-        "codename": "delete_exporttemplate"
+        "codename": "delete_imageattachment"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view export template",
+        "name": "Can view image attachment",
         "content_type": [
             "extras",
-            "exporttemplate"
+            "imageattachment"
         ],
-        "codename": "view_exporttemplate"
+        "codename": "view_imageattachment"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add graph",
+        "name": "Can add report result",
         "content_type": [
             "extras",
-            "graph"
+            "reportresult"
         ],
-        "codename": "add_graph"
+        "codename": "add_reportresult"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change graph",
+        "name": "Can change report result",
         "content_type": [
             "extras",
-            "graph"
+            "reportresult"
         ],
-        "codename": "change_graph"
+        "codename": "change_reportresult"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete graph",
+        "name": "Can delete report result",
         "content_type": [
             "extras",
-            "graph"
+            "reportresult"
         ],
-        "codename": "delete_graph"
+        "codename": "delete_reportresult"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view graph",
+        "name": "Can view report result",
         "content_type": [
             "extras",
-            "graph"
+            "reportresult"
         ],
-        "codename": "view_graph"
+        "codename": "view_reportresult"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add webhook",
+        "content_type": [
+            "extras",
+            "webhook"
+        ],
+        "codename": "add_webhook"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change webhook",
+        "content_type": [
+            "extras",
+            "webhook"
+        ],
+        "codename": "change_webhook"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete webhook",
+        "content_type": [
+            "extras",
+            "webhook"
+        ],
+        "codename": "delete_webhook"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view webhook",
+        "content_type": [
+            "extras",
+            "webhook"
+        ],
+        "codename": "view_webhook"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add custom link",
+        "content_type": [
+            "extras",
+            "customlink"
+        ],
+        "codename": "add_customlink"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change custom link",
+        "content_type": [
+            "extras",
+            "customlink"
+        ],
+        "codename": "change_customlink"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete custom link",
+        "content_type": [
+            "extras",
+            "customlink"
+        ],
+        "codename": "delete_customlink"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view custom link",
+        "content_type": [
+            "extras",
+            "customlink"
+        ],
+        "codename": "view_customlink"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add custom field value",
+        "content_type": [
+            "extras",
+            "customfieldvalue"
+        ],
+        "codename": "add_customfieldvalue"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change custom field value",
+        "content_type": [
+            "extras",
+            "customfieldvalue"
+        ],
+        "codename": "change_customfieldvalue"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete custom field value",
+        "content_type": [
+            "extras",
+            "customfieldvalue"
+        ],
+        "codename": "delete_customfieldvalue"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view custom field value",
+        "content_type": [
+            "extras",
+            "customfieldvalue"
+        ],
+        "codename": "view_customfieldvalue"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add custom field",
+        "content_type": [
+            "extras",
+            "customfield"
+        ],
+        "codename": "add_customfield"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change custom field",
+        "content_type": [
+            "extras",
+            "customfield"
+        ],
+        "codename": "change_customfield"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete custom field",
+        "content_type": [
+            "extras",
+            "customfield"
+        ],
+        "codename": "delete_customfield"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view custom field",
+        "content_type": [
+            "extras",
+            "customfield"
+        ],
+        "codename": "view_customfield"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add config context",
+        "content_type": [
+            "extras",
+            "configcontext"
+        ],
+        "codename": "add_configcontext"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change config context",
+        "content_type": [
+            "extras",
+            "configcontext"
+        ],
+        "codename": "change_configcontext"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete config context",
+        "content_type": [
+            "extras",
+            "configcontext"
+        ],
+        "codename": "delete_configcontext"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view config context",
+        "content_type": [
+            "extras",
+            "configcontext"
+        ],
+        "codename": "view_configcontext"
     }
 },
 {
@@ -6421,6 +6032,138 @@
 {
     "model": "auth.permission",
     "fields": {
+        "name": "Can add object change",
+        "content_type": [
+            "extras",
+            "objectchange"
+        ],
+        "codename": "add_objectchange"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change object change",
+        "content_type": [
+            "extras",
+            "objectchange"
+        ],
+        "codename": "change_objectchange"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete object change",
+        "content_type": [
+            "extras",
+            "objectchange"
+        ],
+        "codename": "delete_objectchange"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view object change",
+        "content_type": [
+            "extras",
+            "objectchange"
+        ],
+        "codename": "view_objectchange"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add graph",
+        "content_type": [
+            "extras",
+            "graph"
+        ],
+        "codename": "add_graph"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change graph",
+        "content_type": [
+            "extras",
+            "graph"
+        ],
+        "codename": "change_graph"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete graph",
+        "content_type": [
+            "extras",
+            "graph"
+        ],
+        "codename": "delete_graph"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view graph",
+        "content_type": [
+            "extras",
+            "graph"
+        ],
+        "codename": "view_graph"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add custom field choice",
+        "content_type": [
+            "extras",
+            "customfieldchoice"
+        ],
+        "codename": "add_customfieldchoice"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change custom field choice",
+        "content_type": [
+            "extras",
+            "customfieldchoice"
+        ],
+        "codename": "change_customfieldchoice"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete custom field choice",
+        "content_type": [
+            "extras",
+            "customfieldchoice"
+        ],
+        "codename": "delete_customfieldchoice"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view custom field choice",
+        "content_type": [
+            "extras",
+            "customfieldchoice"
+        ],
+        "codename": "view_customfieldchoice"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
         "name": "Can add tag",
         "content_type": [
             "extras",
@@ -6465,45 +6208,89 @@
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add image attachment",
+        "name": "Can add export template",
         "content_type": [
             "extras",
-            "imageattachment"
+            "exporttemplate"
         ],
-        "codename": "add_imageattachment"
+        "codename": "add_exporttemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change image attachment",
+        "name": "Can change export template",
         "content_type": [
             "extras",
-            "imageattachment"
+            "exporttemplate"
         ],
-        "codename": "change_imageattachment"
+        "codename": "change_exporttemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete image attachment",
+        "name": "Can delete export template",
         "content_type": [
             "extras",
-            "imageattachment"
+            "exporttemplate"
         ],
-        "codename": "delete_imageattachment"
+        "codename": "delete_exporttemplate"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view image attachment",
+        "name": "Can view export template",
         "content_type": [
             "extras",
-            "imageattachment"
+            "exporttemplate"
         ],
-        "codename": "view_imageattachment"
+        "codename": "view_exporttemplate"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session key",
+        "content_type": [
+            "secrets",
+            "sessionkey"
+        ],
+        "codename": "add_sessionkey"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session key",
+        "content_type": [
+            "secrets",
+            "sessionkey"
+        ],
+        "codename": "change_sessionkey"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session key",
+        "content_type": [
+            "secrets",
+            "sessionkey"
+        ],
+        "codename": "delete_sessionkey"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view session key",
+        "content_type": [
+            "secrets",
+            "sessionkey"
+        ],
+        "codename": "view_sessionkey"
     }
 },
 {
@@ -6548,6 +6335,50 @@
             "secretrole"
         ],
         "codename": "view_secretrole"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add secret",
+        "content_type": [
+            "secrets",
+            "secret"
+        ],
+        "codename": "add_secret"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change secret",
+        "content_type": [
+            "secrets",
+            "secret"
+        ],
+        "codename": "change_secret"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete secret",
+        "content_type": [
+            "secrets",
+            "secret"
+        ],
+        "codename": "delete_secret"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view secret",
+        "content_type": [
+            "secrets",
+            "secret"
+        ],
+        "codename": "view_secret"
     }
 },
 {
@@ -6608,89 +6439,45 @@
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add secret",
+        "name": "Can add tenant group",
         "content_type": [
-            "secrets",
-            "secret"
+            "tenancy",
+            "tenantgroup"
         ],
-        "codename": "add_secret"
+        "codename": "add_tenantgroup"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change secret",
+        "name": "Can change tenant group",
         "content_type": [
-            "secrets",
-            "secret"
+            "tenancy",
+            "tenantgroup"
         ],
-        "codename": "change_secret"
+        "codename": "change_tenantgroup"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete secret",
+        "name": "Can delete tenant group",
         "content_type": [
-            "secrets",
-            "secret"
+            "tenancy",
+            "tenantgroup"
         ],
-        "codename": "delete_secret"
+        "codename": "delete_tenantgroup"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view secret",
+        "name": "Can view tenant group",
         "content_type": [
-            "secrets",
-            "secret"
+            "tenancy",
+            "tenantgroup"
         ],
-        "codename": "view_secret"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add session key",
-        "content_type": [
-            "secrets",
-            "sessionkey"
-        ],
-        "codename": "add_sessionkey"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change session key",
-        "content_type": [
-            "secrets",
-            "sessionkey"
-        ],
-        "codename": "change_sessionkey"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete session key",
-        "content_type": [
-            "secrets",
-            "sessionkey"
-        ],
-        "codename": "delete_sessionkey"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view session key",
-        "content_type": [
-            "secrets",
-            "sessionkey"
-        ],
-        "codename": "view_sessionkey"
+        "codename": "view_tenantgroup"
     }
 },
 {
@@ -6740,50 +6527,6 @@
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add tenant group",
-        "content_type": [
-            "tenancy",
-            "tenantgroup"
-        ],
-        "codename": "add_tenantgroup"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change tenant group",
-        "content_type": [
-            "tenancy",
-            "tenantgroup"
-        ],
-        "codename": "change_tenantgroup"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete tenant group",
-        "content_type": [
-            "tenancy",
-            "tenantgroup"
-        ],
-        "codename": "delete_tenantgroup"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view tenant group",
-        "content_type": [
-            "tenancy",
-            "tenantgroup"
-        ],
-        "codename": "view_tenantgroup"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
         "name": "Can add token",
         "content_type": [
             "users",
@@ -6828,89 +6571,45 @@
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add cluster type",
+        "name": "Can add cluster",
         "content_type": [
             "virtualization",
-            "clustertype"
+            "cluster"
         ],
-        "codename": "add_clustertype"
+        "codename": "add_cluster"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change cluster type",
+        "name": "Can change cluster",
         "content_type": [
             "virtualization",
-            "clustertype"
+            "cluster"
         ],
-        "codename": "change_clustertype"
+        "codename": "change_cluster"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete cluster type",
+        "name": "Can delete cluster",
         "content_type": [
             "virtualization",
-            "clustertype"
+            "cluster"
         ],
-        "codename": "delete_clustertype"
+        "codename": "delete_cluster"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view cluster type",
+        "name": "Can view cluster",
         "content_type": [
             "virtualization",
-            "clustertype"
+            "cluster"
         ],
-        "codename": "view_clustertype"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add virtual machine",
-        "content_type": [
-            "virtualization",
-            "virtualmachine"
-        ],
-        "codename": "add_virtualmachine"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change virtual machine",
-        "content_type": [
-            "virtualization",
-            "virtualmachine"
-        ],
-        "codename": "change_virtualmachine"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete virtual machine",
-        "content_type": [
-            "virtualization",
-            "virtualmachine"
-        ],
-        "codename": "delete_virtualmachine"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view virtual machine",
-        "content_type": [
-            "virtualization",
-            "virtualmachine"
-        ],
-        "codename": "view_virtualmachine"
+        "codename": "view_cluster"
     }
 },
 {
@@ -6960,45 +6659,657 @@
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can add cluster",
+        "name": "Can add virtual machine",
         "content_type": [
             "virtualization",
-            "cluster"
+            "virtualmachine"
         ],
-        "codename": "add_cluster"
+        "codename": "add_virtualmachine"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can change cluster",
+        "name": "Can change virtual machine",
         "content_type": [
             "virtualization",
-            "cluster"
+            "virtualmachine"
         ],
-        "codename": "change_cluster"
+        "codename": "change_virtualmachine"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can delete cluster",
+        "name": "Can delete virtual machine",
         "content_type": [
             "virtualization",
-            "cluster"
+            "virtualmachine"
         ],
-        "codename": "delete_cluster"
+        "codename": "delete_virtualmachine"
     }
 },
 {
     "model": "auth.permission",
     "fields": {
-        "name": "Can view cluster",
+        "name": "Can view virtual machine",
         "content_type": [
             "virtualization",
-            "cluster"
+            "virtualmachine"
         ],
-        "codename": "view_cluster"
+        "codename": "view_virtualmachine"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add cluster type",
+        "content_type": [
+            "virtualization",
+            "clustertype"
+        ],
+        "codename": "add_clustertype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change cluster type",
+        "content_type": [
+            "virtualization",
+            "clustertype"
+        ],
+        "codename": "change_clustertype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete cluster type",
+        "content_type": [
+            "virtualization",
+            "clustertype"
+        ],
+        "codename": "delete_clustertype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view cluster type",
+        "content_type": [
+            "virtualization",
+            "clustertype"
+        ],
+        "codename": "view_clustertype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add script",
+        "content_type": [
+            "extras",
+            "script"
+        ],
+        "codename": "add_script"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change script",
+        "content_type": [
+            "extras",
+            "script"
+        ],
+        "codename": "change_script"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete script",
+        "content_type": [
+            "extras",
+            "script"
+        ],
+        "codename": "delete_script"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view script",
+        "content_type": [
+            "extras",
+            "script"
+        ],
+        "codename": "view_script"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can run script",
+        "content_type": [
+            "extras",
+            "script"
+        ],
+        "codename": "run_script"
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$150000$8X6FHnT5U0vC$Xg5oc9TrHCE1HYfBTQL1Mnr+WObSNwwbwPLtjmOD4JI=",
+        "last_login": "2019-09-05T19:47:57.761Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-09-05T19:47:18.136Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 1,
+    "fields": {
+        "time": "2019-09-05T19:51:28.920Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "ff13b6de-3121-4881-b7a9-21f3f711c34a",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "rack"
+        ],
+        "changed_object_id": 112,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "R204 (1430:0204)",
+        "object_data": {
+            "name": "R204",
+            "role": 21,
+            "site": 76,
+            "tags": [],
+            "type": null,
+            "group": 14,
+            "width": 19,
+            "serial": "",
+            "status": 3,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "u_height": 42,
+            "asset_tag": null,
+            "desc_units": false,
+            "outer_unit": null,
+            "facility_id": "1430:0204",
+            "outer_depth": null,
+            "outer_width": null,
+            "last_updated": "2019-08-02T20:11:01.768Z",
+            "custom_fields": {}
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 2,
+    "fields": {
+        "time": "2019-09-05T19:51:28.933Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "ff13b6de-3121-4881-b7a9-21f3f711c34a",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "rack"
+        ],
+        "changed_object_id": 111,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "R203 (1430:0203)",
+        "object_data": {
+            "name": "R203",
+            "role": 21,
+            "site": 76,
+            "tags": [],
+            "type": null,
+            "group": 14,
+            "width": 19,
+            "serial": "",
+            "status": 3,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "u_height": 42,
+            "asset_tag": null,
+            "desc_units": false,
+            "outer_unit": null,
+            "facility_id": "1430:0203",
+            "outer_depth": null,
+            "outer_width": null,
+            "last_updated": "2019-08-02T20:11:01.761Z",
+            "custom_fields": {}
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 3,
+    "fields": {
+        "time": "2019-09-05T19:51:28.940Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "ff13b6de-3121-4881-b7a9-21f3f711c34a",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "rack"
+        ],
+        "changed_object_id": 110,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "R202 (1430:0202)",
+        "object_data": {
+            "name": "R202",
+            "role": 20,
+            "site": 76,
+            "tags": [],
+            "type": null,
+            "group": 14,
+            "width": 19,
+            "serial": "",
+            "status": 3,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "u_height": 42,
+            "asset_tag": null,
+            "desc_units": false,
+            "outer_unit": null,
+            "facility_id": "1430:0202",
+            "outer_depth": null,
+            "outer_width": null,
+            "last_updated": "2019-08-02T20:11:01.755Z",
+            "custom_fields": {}
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 4,
+    "fields": {
+        "time": "2019-09-05T19:51:28.949Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "ff13b6de-3121-4881-b7a9-21f3f711c34a",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "rack"
+        ],
+        "changed_object_id": 109,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "R201 (1430:0201)",
+        "object_data": {
+            "name": "R201",
+            "role": 20,
+            "site": 76,
+            "tags": [],
+            "type": null,
+            "group": 14,
+            "width": 19,
+            "serial": "",
+            "status": 3,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "u_height": 42,
+            "asset_tag": null,
+            "desc_units": false,
+            "outer_unit": null,
+            "facility_id": "1430:0201",
+            "outer_depth": null,
+            "outer_width": null,
+            "last_updated": "2019-08-02T20:11:01.749Z",
+            "custom_fields": {}
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 5,
+    "fields": {
+        "time": "2019-09-05T19:51:28.956Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "ff13b6de-3121-4881-b7a9-21f3f711c34a",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "rack"
+        ],
+        "changed_object_id": 108,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "R104 (1430:0104)",
+        "object_data": {
+            "name": "R104",
+            "role": 20,
+            "site": 76,
+            "tags": [],
+            "type": null,
+            "group": 14,
+            "width": 19,
+            "serial": "",
+            "status": 3,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "u_height": 42,
+            "asset_tag": null,
+            "desc_units": false,
+            "outer_unit": null,
+            "facility_id": "1430:0104",
+            "outer_depth": null,
+            "outer_width": null,
+            "last_updated": "2019-08-02T20:11:01.742Z",
+            "custom_fields": {}
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 6,
+    "fields": {
+        "time": "2019-09-05T19:51:28.964Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "ff13b6de-3121-4881-b7a9-21f3f711c34a",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "rack"
+        ],
+        "changed_object_id": 107,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "R103 (1430:0103)",
+        "object_data": {
+            "name": "R103",
+            "role": 20,
+            "site": 76,
+            "tags": [],
+            "type": null,
+            "group": 14,
+            "width": 19,
+            "serial": "",
+            "status": 3,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "u_height": 42,
+            "asset_tag": null,
+            "desc_units": false,
+            "outer_unit": null,
+            "facility_id": "1430:0103",
+            "outer_depth": null,
+            "outer_width": null,
+            "last_updated": "2019-08-02T20:11:01.736Z",
+            "custom_fields": {}
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 7,
+    "fields": {
+        "time": "2019-09-05T19:51:28.972Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "ff13b6de-3121-4881-b7a9-21f3f711c34a",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "rack"
+        ],
+        "changed_object_id": 106,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "R102 (1430:0102)",
+        "object_data": {
+            "name": "R102",
+            "role": 20,
+            "site": 76,
+            "tags": [],
+            "type": null,
+            "group": 14,
+            "width": 19,
+            "serial": "",
+            "status": 3,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "u_height": 42,
+            "asset_tag": null,
+            "desc_units": false,
+            "outer_unit": null,
+            "facility_id": "1430:0102",
+            "outer_depth": null,
+            "outer_width": null,
+            "last_updated": "2019-08-02T20:11:01.729Z",
+            "custom_fields": {}
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 8,
+    "fields": {
+        "time": "2019-09-05T19:51:28.980Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "ff13b6de-3121-4881-b7a9-21f3f711c34a",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "rack"
+        ],
+        "changed_object_id": 105,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "R101 (1430:0101)",
+        "object_data": {
+            "name": "R101",
+            "role": 19,
+            "site": 76,
+            "tags": [],
+            "type": null,
+            "group": 14,
+            "width": 19,
+            "serial": "",
+            "status": 3,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "u_height": 42,
+            "asset_tag": null,
+            "desc_units": false,
+            "outer_unit": null,
+            "facility_id": "1430:0101",
+            "outer_depth": null,
+            "outer_width": null,
+            "last_updated": "2019-08-02T20:11:01.723Z",
+            "custom_fields": {}
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 9,
+    "fields": {
+        "time": "2019-09-05T19:51:35.682Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "3e90b670-0203-422c-a5f3-8b504974aca0",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "rackgroup"
+        ],
+        "changed_object_id": 14,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Cage 1430",
+        "object_data": {
+            "name": "Cage 1430",
+            "site": 76,
+            "slug": "cage-1430",
+            "created": "2019-08-02",
+            "last_updated": "2019-08-02T20:11:01.637Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 10,
+    "fields": {
+        "time": "2019-09-05T19:51:35.695Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "3e90b670-0203-422c-a5f3-8b504974aca0",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "rackgroup"
+        ],
+        "changed_object_id": 13,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Cage 1200",
+        "object_data": {
+            "name": "Cage 1200",
+            "site": 75,
+            "slug": "cage-1200",
+            "created": "2019-08-02",
+            "last_updated": "2019-08-02T20:11:01.633Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 11,
+    "fields": {
+        "time": "2019-09-05T19:51:35.706Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "3e90b670-0203-422c-a5f3-8b504974aca0",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "site"
+        ],
+        "changed_object_id": 76,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "DC West",
+        "object_data": {
+            "asn": null,
+            "name": "DC West",
+            "slug": "dc-west",
+            "tags": [],
+            "region": null,
+            "status": 1,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "facility": "",
+            "latitude": null,
+            "longitude": null,
+            "time_zone": null,
+            "description": "",
+            "contact_name": "",
+            "last_updated": "2019-08-02T20:11:01.635Z",
+            "contact_email": "",
+            "contact_phone": "",
+            "custom_fields": {},
+            "physical_address": "",
+            "shipping_address": ""
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 12,
+    "fields": {
+        "time": "2019-09-05T19:51:35.717Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "3e90b670-0203-422c-a5f3-8b504974aca0",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "site"
+        ],
+        "changed_object_id": 75,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "DC East",
+        "object_data": {
+            "asn": null,
+            "name": "DC East",
+            "slug": "dc-east",
+            "tags": [],
+            "region": null,
+            "status": 1,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "facility": "",
+            "latitude": null,
+            "longitude": null,
+            "time_zone": null,
+            "description": "",
+            "contact_name": "",
+            "last_updated": "2019-08-02T20:11:01.630Z",
+            "contact_email": "",
+            "contact_phone": "",
+            "custom_fields": {},
+            "physical_address": "",
+            "shipping_address": ""
+        }
     }
 }
 ]
