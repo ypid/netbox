@@ -10,9 +10,11 @@ Sample data is included with NetBox for demonstration and development purposes. 
 
 ## Saving Demo Data
 
+When exporting demo data, remember to exclude any unmanaged models.
+
 !!! warning
     Do not overwrite the stock demo data unless you are intentionally updating it for a new release.
 
 ```
-./manage.py dumpdata --natural-foreign --natural-primary --indent 4 --format json -o <filename>
+./manage.py dumpdata -o <filename> --natural-foreign --natural-primary --indent 4 --format json --exclude extras.Script
 ```
