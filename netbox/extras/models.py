@@ -1,6 +1,7 @@
 from collections import OrderedDict
 from datetime import date
 
+import graphviz
 from django.contrib.auth.models import User
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
@@ -11,7 +12,6 @@ from django.db.models import F, Q
 from django.http import HttpResponse
 from django.template import Template, Context
 from django.urls import reverse
-import graphviz
 from jinja2 import Environment
 from taggit.models import TagBase, GenericTaggedItemBase
 
@@ -70,6 +70,12 @@ class Webhook(models.Model):
         default=WEBHOOK_CT_JSON,
         verbose_name='HTTP content type'
     )
+    additional_headers = JSONField(
+        null=True,
+        blank=True,
+        help_text="User supplied headers which should be added to the request in addition to the HTTP content type. "
+                  "Headers are supplied as key/value pairs in a JSON object."
+    )
     secret = models.CharField(
         max_length=255,
         blank=True,
@@ -85,6 +91,14 @@ class Webhook(models.Model):
         default=True,
         verbose_name='SSL verification',
         help_text="Enable SSL certificate verification. Disable with caution!"
+    )
+    ca_file_path = models.CharField(
+        max_length=4096,
+        null=True,
+        blank=True,
+        verbose_name='CA File Path',
+        help_text='The specific CA certificate file to use for SSL verification. '
+                  'Leave blank to use the system defaults.'
     )
 
     class Meta:
@@ -102,6 +116,17 @@ class Webhook(models.Model):
                 "You must select at least one type: create, update, and/or delete."
             )
 
+        if not self.ssl_verification and self.ca_file_path:
+            raise ValidationError({
+                'ca_file_path': 'Do not specify a CA certificate file if SSL verification is dissabled.'
+            })
+
+        # Verify that JSON data is provided as an object
+        if self.additional_headers and type(self.additional_headers) is not dict:
+            raise ValidationError({
+                'additional_headers': 'Header JSON data must be in object form. Example: {"X-API-KEY": "abc123"}'
+            })
+
 
 #
 # Custom fields
@@ -113,16 +138,21 @@ class CustomFieldModel(models.Model):
     class Meta:
         abstract = True
 
+    def cache_custom_fields(self):
+        """
+        Cache all custom field values for this instance
+        """
+        self._cf = {
+            field.name: value for field, value in self.get_custom_fields().items()
+        }
+
     @property
     def cf(self):
         """
         Name-based CustomFieldValue accessor for use in templates
         """
         if self._cf is None:
-            # Cache all custom field values for this instance
-            self._cf = {
-                field.name: value for field, value in self.get_custom_fields().items()
-            }
+            self.cache_custom_fields()
         return self._cf
 
     def get_custom_fields(self):
@@ -435,14 +465,19 @@ class ExportTemplate(models.Model):
         choices=TEMPLATE_LANGUAGE_CHOICES,
         default=TEMPLATE_LANGUAGE_JINJA2
     )
-    template_code = models.TextField()
+    template_code = models.TextField(
+        help_text='The list of objects being exported is passed as a context variable named <code>queryset</code>.'
+    )
     mime_type = models.CharField(
         max_length=50,
-        blank=True
+        blank=True,
+        verbose_name='MIME type',
+        help_text='Defaults to <code>text/plain</code>'
     )
     file_extension = models.CharField(
         max_length=15,
-        blank=True
+        blank=True,
+        help_text='Extension to append to the rendered filename'
     )
 
     class Meta:
@@ -800,7 +835,10 @@ class ConfigContext(models.Model):
 
 
 class ConfigContextModel(models.Model):
-
+    """
+    A model which includes local configuration context data. This local data will override any inherited data from
+    ConfigContexts.
+    """
     local_context_data = JSONField(
         blank=True,
         null=True,
@@ -824,6 +862,16 @@ class ConfigContextModel(models.Model):
             data = deepmerge(data, self.local_context_data)
 
         return data
+
+    def clean(self):
+
+        super().clean()
+
+        # Verify that JSON data is provided as an object
+        if self.local_context_data and type(self.local_context_data) is not dict:
+            raise ValidationError(
+                {'local_context_data': 'JSON data must be in object form. Example: {"foo": 123}'}
+            )
 
 
 #

@@ -6,8 +6,6 @@ from io import StringIO
 from django import forms
 from django.conf import settings
 from django.contrib.postgres.forms.jsonb import JSONField as _JSONField, InvalidJSONInput
-from django.db.models import Count
-from django.urls import reverse_lazy
 from mptt.forms import TreeNodeMultipleChoiceField
 
 from .constants import *
@@ -298,6 +296,7 @@ class APISelect(SelectWithDisabled):
         conditional_query_params=None,
         additional_query_params=None,
         null_option=False,
+        full=False,
         *args,
         **kwargs
     ):
@@ -306,6 +305,8 @@ class APISelect(SelectWithDisabled):
 
         self.attrs['class'] = 'netbox-select2-api'
         self.attrs['data-url'] = '/{}{}'.format(settings.BASE_PATH, api_url.lstrip('/'))  # Inject BASE_PATH
+        if full:
+            self.attrs['data-full'] = full
         if display_field:
             self.attrs['display-field'] = display_field
         if value_field:
@@ -381,7 +382,7 @@ class CSVDataField(forms.CharField):
 
         self.strip = False
         if not self.label:
-            self.label = 'CSV Data'
+            self.label = ''
         if not self.initial:
             self.initial = ','.join(required_fields) + '\n'
         if not self.help_text:
@@ -481,7 +482,7 @@ class CommentField(forms.CharField):
     A textarea with support for GitHub-Flavored Markdown. Exists mostly just to add a standard help_text.
     """
     widget = forms.Textarea
-    default_label = 'Comments'
+    default_label = ''
     # TODO: Port GFM syntax cheat sheet to internal documentation
     default_helptext = '<i class="fa fa-info-circle"></i> '\
                        '<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">'\

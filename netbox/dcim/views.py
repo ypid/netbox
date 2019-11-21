@@ -16,7 +16,8 @@ from django.utils.safestring import mark_safe
 from django.views.generic import View
 
 from circuits.models import Circuit
-from extras.models import Graph, TopologyMap, GRAPH_TYPE_INTERFACE, GRAPH_TYPE_SITE
+from extras.constants import GRAPH_TYPE_DEVICE, GRAPH_TYPE_INTERFACE, GRAPH_TYPE_SITE
+from extras.models import Graph, TopologyMap
 from extras.views import ObjectConfigContextView
 from ipam.models import Prefix, VLAN
 from ipam.tables import InterfaceIPAddressTable, InterfaceVLANTable
@@ -403,8 +404,12 @@ class RackView(PermissionRequiredMixin, View):
             position__isnull=True,
             parent_bay__isnull=True
         ).prefetch_related('device_type__manufacturer')
-        next_rack = Rack.objects.filter(site=rack.site, name__gt=rack.name).order_by('name').first()
-        prev_rack = Rack.objects.filter(site=rack.site, name__lt=rack.name).order_by('-name').first()
+        if rack.group:
+            peer_racks = Rack.objects.filter(site=rack.site, group=rack.group)
+        else:
+            peer_racks = Rack.objects.filter(site=rack.site, group__isnull=True)
+        next_rack = peer_racks.filter(name__gt=rack.name).order_by('name').first()
+        prev_rack = peer_racks.filter(name__lt=rack.name).order_by('-name').first()
 
         reservations = RackReservation.objects.filter(rack=rack)
         power_feeds = PowerFeed.objects.filter(rack=rack).prefetch_related('power_panel')
@@ -692,6 +697,12 @@ class ConsolePortTemplateCreateView(PermissionRequiredMixin, ComponentCreateView
     template_name = 'dcim/device_component_add.html'
 
 
+class ConsolePortTemplateEditView(PermissionRequiredMixin, ObjectEditView):
+    permission_required = 'dcim.change_consoleporttemplate'
+    model = ConsolePortTemplate
+    model_form = forms.ConsolePortTemplateForm
+
+
 class ConsolePortTemplateBulkDeleteView(PermissionRequiredMixin, BulkDeleteView):
     permission_required = 'dcim.delete_consoleporttemplate'
     queryset = ConsolePortTemplate.objects.all()
@@ -707,6 +718,12 @@ class ConsoleServerPortTemplateCreateView(PermissionRequiredMixin, ComponentCrea
     form = forms.ConsoleServerPortTemplateCreateForm
     model_form = forms.ConsoleServerPortTemplateForm
     template_name = 'dcim/device_component_add.html'
+
+
+class ConsoleServerPortTemplateEditView(PermissionRequiredMixin, ObjectEditView):
+    permission_required = 'dcim.change_consoleserverporttemplate'
+    model = ConsoleServerPortTemplate
+    model_form = forms.ConsoleServerPortTemplateForm
 
 
 class ConsoleServerPortTemplateBulkDeleteView(PermissionRequiredMixin, BulkDeleteView):
@@ -726,6 +743,12 @@ class PowerPortTemplateCreateView(PermissionRequiredMixin, ComponentCreateView):
     template_name = 'dcim/device_component_add.html'
 
 
+class PowerPortTemplateEditView(PermissionRequiredMixin, ObjectEditView):
+    permission_required = 'dcim.change_powerporttemplate'
+    model = PowerPortTemplate
+    model_form = forms.PowerPortTemplateForm
+
+
 class PowerPortTemplateBulkDeleteView(PermissionRequiredMixin, BulkDeleteView):
     permission_required = 'dcim.delete_powerporttemplate'
     queryset = PowerPortTemplate.objects.all()
@@ -743,6 +766,12 @@ class PowerOutletTemplateCreateView(PermissionRequiredMixin, ComponentCreateView
     template_name = 'dcim/device_component_add.html'
 
 
+class PowerOutletTemplateEditView(PermissionRequiredMixin, ObjectEditView):
+    permission_required = 'dcim.change_poweroutlettemplate'
+    model = PowerOutletTemplate
+    model_form = forms.PowerOutletTemplateForm
+
+
 class PowerOutletTemplateBulkDeleteView(PermissionRequiredMixin, BulkDeleteView):
     permission_required = 'dcim.delete_poweroutlettemplate'
     queryset = PowerOutletTemplate.objects.all()
@@ -758,6 +787,12 @@ class InterfaceTemplateCreateView(PermissionRequiredMixin, ComponentCreateView):
     form = forms.InterfaceTemplateCreateForm
     model_form = forms.InterfaceTemplateForm
     template_name = 'dcim/device_component_add.html'
+
+
+class InterfaceTemplateEditView(PermissionRequiredMixin, ObjectEditView):
+    permission_required = 'dcim.change_interfacetemplate'
+    model = InterfaceTemplate
+    model_form = forms.InterfaceTemplateForm
 
 
 class InterfaceTemplateBulkEditView(PermissionRequiredMixin, BulkEditView):
@@ -785,6 +820,12 @@ class FrontPortTemplateCreateView(PermissionRequiredMixin, ComponentCreateView):
     template_name = 'dcim/device_component_add.html'
 
 
+class FrontPortTemplateEditView(PermissionRequiredMixin, ObjectEditView):
+    permission_required = 'dcim.change_frontporttemplate'
+    model = FrontPortTemplate
+    model_form = forms.FrontPortTemplateForm
+
+
 class FrontPortTemplateBulkDeleteView(PermissionRequiredMixin, BulkDeleteView):
     permission_required = 'dcim.delete_frontporttemplate'
     queryset = FrontPortTemplate.objects.all()
@@ -802,6 +843,12 @@ class RearPortTemplateCreateView(PermissionRequiredMixin, ComponentCreateView):
     template_name = 'dcim/device_component_add.html'
 
 
+class RearPortTemplateEditView(PermissionRequiredMixin, ObjectEditView):
+    permission_required = 'dcim.change_rearporttemplate'
+    model = RearPortTemplate
+    model_form = forms.RearPortTemplateForm
+
+
 class RearPortTemplateBulkDeleteView(PermissionRequiredMixin, BulkDeleteView):
     permission_required = 'dcim.delete_rearporttemplate'
     queryset = RearPortTemplate.objects.all()
@@ -817,6 +864,12 @@ class DeviceBayTemplateCreateView(PermissionRequiredMixin, ComponentCreateView):
     form = forms.DeviceBayTemplateCreateForm
     model_form = forms.DeviceBayTemplateForm
     template_name = 'dcim/device_component_add.html'
+
+
+class DeviceBayTemplateEditView(PermissionRequiredMixin, ObjectEditView):
+    permission_required = 'dcim.change_devicebaytemplate'
+    model = DeviceBayTemplate
+    model_form = forms.DeviceBayTemplateForm
 
 
 class DeviceBayTemplateBulkDeleteView(PermissionRequiredMixin, BulkDeleteView):
@@ -972,9 +1025,6 @@ class DeviceView(PermissionRequiredMixin, View):
             'rack', 'device_type__manufacturer'
         )[:10]
 
-        # Show graph button on interfaces only if at least one graph has been created.
-        show_graphs = Graph.objects.filter(type=GRAPH_TYPE_INTERFACE).exists()
-
         return render(request, 'dcim/device.html', {
             'device': device,
             'console_ports': console_ports,
@@ -989,7 +1039,8 @@ class DeviceView(PermissionRequiredMixin, View):
             'secrets': secrets,
             'vc_members': vc_members,
             'related_devices': related_devices,
-            'show_graphs': show_graphs,
+            'show_graphs': Graph.objects.filter(type=GRAPH_TYPE_DEVICE).exists(),
+            'show_interface_graphs': Graph.objects.filter(type=GRAPH_TYPE_INTERFACE).exists(),
         })
 
 
@@ -1346,12 +1397,6 @@ class InterfaceEditView(PermissionRequiredMixin, ObjectEditView):
     model = Interface
     model_form = forms.InterfaceForm
     template_name = 'dcim/interface_edit.html'
-
-
-class InterfaceAssignVLANsView(PermissionRequiredMixin, ObjectEditView):
-    permission_required = 'dcim.change_interface'
-    model = Interface
-    model_form = forms.InterfaceAssignVLANsForm
 
 
 class InterfaceDeleteView(PermissionRequiredMixin, ObjectDeleteView):

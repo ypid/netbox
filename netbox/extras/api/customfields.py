@@ -5,7 +5,7 @@ from django.db import transaction
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 
-from extras.constants import CF_TYPE_BOOLEAN, CF_TYPE_DATE, CF_TYPE_INTEGER, CF_TYPE_SELECT
+from extras.constants import *
 from extras.models import CustomField, CustomFieldChoice, CustomFieldValue
 from utilities.api import ValidatedModelSerializer
 
@@ -97,13 +97,13 @@ class CustomFieldModelSerializer(ValidatedModelSerializer):
     def __init__(self, *args, **kwargs):
 
         def _populate_custom_fields(instance, fields):
-            custom_fields = {f.name: None for f in fields}
-            for cfv in instance.custom_field_values.all():
-                if cfv.field.type == CF_TYPE_SELECT:
-                    custom_fields[cfv.field.name] = CustomFieldChoiceSerializer(cfv.value).data
+            instance.custom_fields = {}
+            for field in fields:
+                value = instance.cf.get(field.name)
+                if field.type == CF_TYPE_SELECT and value is not None:
+                    instance.custom_fields[field.name] = CustomFieldChoiceSerializer(value).data
                 else:
-                    custom_fields[cfv.field.name] = cfv.value
-            instance.custom_fields = custom_fields
+                    instance.custom_fields[field.name] = value
 
         super().__init__(*args, **kwargs)
 

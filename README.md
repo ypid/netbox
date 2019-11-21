@@ -3,7 +3,8 @@
 NetBox is an IP address management (IPAM) and data center infrastructure
 management (DCIM) tool. Initially conceived by the network engineering team at
 [DigitalOcean](https://www.digitalocean.com/), NetBox was developed specifically
-to address the needs of network and infrastructure engineers.
+to address the needs of network and infrastructure engineers. It is intended to
+function as a domain-specific source of truth for network operations.
 
 NetBox runs as a web application atop the [Django](https://www.djangoproject.com/)
 Python framework with a [PostgreSQL](http://www.postgresql.org/) database. For a
@@ -18,8 +19,8 @@ or join us in the #netbox Slack channel on [NetworkToCode](https://networktocode
 
 |             | status |
 |-------------|------------|
-| **master** | [![Build Status](https://travis-ci.org/digitalocean/netbox.svg?branch=master)](https://travis-ci.org/digitalocean/netbox) |
-| **develop** | [![Build Status](https://travis-ci.org/digitalocean/netbox.svg?branch=develop)](https://travis-ci.org/digitalocean/netbox) |
+| **master** | [![Build Status](https://travis-ci.org/netbox-community/netbox.svg?branch=master)](https://travis-ci.com/netbox-community/netbox/) |
+| **develop** | [![Build Status](https://travis-ci.org/netbox-community/netbox.svg?branch=develop)](https://travis-ci.com/netbox-community/netbox/) |
 
 ## Screenshots
 
@@ -35,23 +36,15 @@ Please see [the documentation](http://netbox.readthedocs.io/en/stable/) for
 instructions on installing NetBox. To upgrade NetBox, please download the [latest release](https://github.com/netbox-community/netbox/releases)
 and run `upgrade.sh`.
 
-## Alternative Installations
+# Providing Feedback
 
-* [Docker container](https://github.com/netbox-community/netbox-docker) (via [@cimnine](https://github.com/cimnine))
-* [Vagrant deployment](https://github.com/ryanmerolle/netbox-vagrant) (via [@ryanmerolle](https://github.com/ryanmerolle))
-* [Ansible deployment](https://github.com/lae/ansible-role-netbox) (via [@lae](https://github.com/lae))
+Feature requests and bug reports must be submitted as GiHub issues. (Please be
+sure to use the [appropriate template](https://github.com/netbox-community/netbox/issues/new/choose).)
+For general discussion, please consider joining our [mailing list](https://groups.google.com/forum/#!forum/netbox-discuss).
+
+If you are interested in contributing to the development of NetBox, please read
+our [contributing guide](CONTRIBUTING.md) prior to beginning any work.
 
 # Related projects
 
-## Supported SDK
-
-- [pynetbox](https://github.com/digitalocean/pynetbox) - A Python API client library for Netbox
-
-## Community SDK
-
-- [netbox-client-ruby](https://github.com/ninech/netbox-client-ruby) - A Ruby client library for Netbox
-- [powerbox](https://github.com/BatmanAMA/powerbox) - A PowerShell library for Netbox
-
-## Ansible Inventory
-
-- [netbox-as-ansible-inventory](https://github.com/AAbouZaid/netbox-as-ansible-inventory) - Ansible dynamic inventory script for Netbox
+Please see [our wiki](https://github.com/netbox-community/netbox/wiki/Community-Contributions) for a list of relevant community projects.

@@ -1,7 +1,6 @@
-from collections import OrderedDict
-
 import datetime
 import json
+from collections import OrderedDict
 
 from django.core.serializers import serialize
 from django.db.models import Count, OuterRef, Subquery
@@ -100,7 +99,7 @@ def serialize_object(obj, extra=None):
     # Include any custom fields
     if hasattr(obj, 'get_custom_fields'):
         data['custom_fields'] = {
-            field.name: str(value) for field, value in obj.get_custom_fields().items()
+            field: str(value) for field, value in obj.cf.items()
         }
 
     # Include any tags

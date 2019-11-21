@@ -40,6 +40,9 @@ class WebhookAdmin(admin.ModelAdmin):
         'name', 'models', 'payload_url', 'http_content_type', 'enabled', 'type_create', 'type_update',
         'type_delete', 'ssl_verification',
     ]
+    list_filter = [
+        'enabled', 'type_create', 'type_update', 'type_delete', 'obj_type',
+    ]
     form = WebhookForm
 
     def models(self, obj):
@@ -70,7 +73,12 @@ class CustomFieldChoiceAdmin(admin.TabularInline):
 @admin.register(CustomField, site=admin_site)
 class CustomFieldAdmin(admin.ModelAdmin):
     inlines = [CustomFieldChoiceAdmin]
-    list_display = ['name', 'models', 'type', 'required', 'filter_logic', 'default', 'weight', 'description']
+    list_display = [
+        'name', 'models', 'type', 'required', 'filter_logic', 'default', 'weight', 'description',
+    ]
+    list_filter = [
+        'type', 'required', 'obj_type',
+    ]
     form = CustomFieldForm
 
     def models(self, obj):
@@ -86,6 +94,10 @@ class CustomLinkForm(forms.ModelForm):
     class Meta:
         model = CustomLink
         exclude = []
+        widgets = {
+            'text': forms.Textarea,
+            'url': forms.Textarea,
+        }
         help_texts = {
             'text': 'Jinja2 template code for the link text. Reference the object as <code>{{ obj }}</code>. Links '
                     'which render as empty text will not be displayed.',
@@ -102,7 +114,12 @@ class CustomLinkForm(forms.ModelForm):
 
 @admin.register(CustomLink, site=admin_site)
 class CustomLinkAdmin(admin.ModelAdmin):
-    list_display = ['name', 'content_type', 'group_name', 'weight']
+    list_display = [
+        'name', 'content_type', 'group_name', 'weight',
+    ]
+    list_filter = [
+        'content_type',
+    ]
     form = CustomLinkForm
 
 
@@ -112,7 +129,12 @@ class CustomLinkAdmin(admin.ModelAdmin):
 
 @admin.register(Graph, site=admin_site)
 class GraphAdmin(admin.ModelAdmin):
-    list_display = ['name', 'type', 'weight', 'source']
+    list_display = [
+        'name', 'type', 'weight', 'source',
+    ]
+    list_filter = [
+        'type',
+    ]
 
 
 #
@@ -135,7 +157,12 @@ class ExportTemplateForm(forms.ModelForm):
 
 @admin.register(ExportTemplate, site=admin_site)
 class ExportTemplateAdmin(admin.ModelAdmin):
-    list_display = ['name', 'content_type', 'description', 'mime_type', 'file_extension']
+    list_display = [
+        'name', 'content_type', 'description', 'mime_type', 'file_extension',
+    ]
+    list_filter = [
+        'content_type',
+    ]
     form = ExportTemplateForm
 
 

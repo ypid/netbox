@@ -1,32 +1,34 @@
-from collections import OrderedDict
 import inspect
 import json
 import os
 import pkgutil
 import time
 import traceback
-import yaml
+from collections import OrderedDict
 
+import yaml
 from django import forms
 from django.conf import settings
 from django.core.validators import RegexValidator
 from django.db import transaction
-from mptt.forms import TreeNodeChoiceField
+from mptt.forms import TreeNodeChoiceField, TreeNodeMultipleChoiceField
 from mptt.models import MPTTModel
 
 from ipam.formfields import IPFormField
 from utilities.exceptions import AbortTransaction
+from utilities.validators import MaxPrefixLengthValidator, MinPrefixLengthValidator
 from .constants import LOG_DEFAULT, LOG_FAILURE, LOG_INFO, LOG_SUCCESS, LOG_WARNING
 from .forms import ScriptForm
 from .signals import purge_changelog
 
-
 __all__ = [
     'BaseScript',
     'BooleanVar',
+    'ChoiceVar',
     'FileVar',
     'IntegerVar',
     'IPNetworkVar',
+    'MultiObjectVar',
     'ObjectVar',
     'Script',
     'StringVar',
@@ -61,7 +63,8 @@ class ScriptVariable:
         Render the variable as a Django form field.
         """
         form_field = self.form_field(**self.field_attrs)
-        form_field.widget.attrs['class'] = 'form-control'
+        if not isinstance(form_field.widget, forms.CheckboxInput):
+            form_field.widget.attrs['class'] = 'form-control'
 
         return form_field
 
@@ -131,6 +134,27 @@ class BooleanVar(ScriptVariable):
         self.field_attrs['required'] = False
 
 
+class ChoiceVar(ScriptVariable):
+    """
+    Select one of several predefined static choices, passed as a list of two-tuples. Example:
+
+        color = ChoiceVar(
+            choices=(
+                ('#ff0000', 'Red'),
+                ('#00ff00', 'Green'),
+                ('#0000ff', 'Blue')
+            )
+        )
+    """
+    form_field = forms.ChoiceField
+
+    def __init__(self, choices, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        # Set field choices
+        self.field_attrs['choices'] = choices
+
+
 class ObjectVar(ScriptVariable):
     """
     NetBox object representation. The provided QuerySet will determine the choices available.
@@ -148,6 +172,23 @@ class ObjectVar(ScriptVariable):
             self.form_field = TreeNodeChoiceField
 
 
+class MultiObjectVar(ScriptVariable):
+    """
+    Like ObjectVar, but can represent one or more objects.
+    """
+    form_field = forms.ModelMultipleChoiceField
+
+    def __init__(self, queryset, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        # Queryset for field choices
+        self.field_attrs['queryset'] = queryset
+
+        # Update form field for MPTT (nested) objects
+        if issubclass(queryset.model, MPTTModel):
+            self.form_field = TreeNodeMultipleChoiceField
+
+
 class FileVar(ScriptVariable):
     """
     An uploaded file.
@@ -160,6 +201,21 @@ class IPNetworkVar(ScriptVariable):
     An IPv4 or IPv6 prefix.
     """
     form_field = IPFormField
+
+    def __init__(self, min_prefix_length=None, max_prefix_length=None, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.field_attrs['validators'] = list()
+
+        # Optional minimum/maximum prefix lengths
+        if min_prefix_length is not None:
+            self.field_attrs['validators'].append(
+                MinPrefixLengthValidator(min_prefix_length)
+            )
+        if max_prefix_length is not None:
+            self.field_attrs['validators'].append(
+                MaxPrefixLengthValidator(max_prefix_length)
+            )
 
 
 #
@@ -209,7 +265,7 @@ class BaseScript:
         Return a Django form suitable for populating the context data required to run this Script.
         """
         vars = self._get_vars()
-        form = ScriptForm(vars, data, files)
+        form = ScriptForm(vars, data, files, commit_default=getattr(self.Meta, 'commit_default', True))
 
         return form
 

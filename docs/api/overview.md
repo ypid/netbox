@@ -1,5 +1,3 @@
-NetBox v2.0 and later includes a full-featured REST API that allows its data model to be read and manipulated externally.
-
 # What is a REST API?
 
 REST stands for [representational state transfer](https://en.wikipedia.org/wiki/Representational_state_transfer). It's a particular type of API which employs HTTP to create, retrieve, update, and delete objects from a database. (This set of operations is commonly referred to as CRUD.) Each type of operation is associated with a particular HTTP verb:
@@ -33,6 +31,10 @@ $ curl -s http://localhost:8000/api/ipam/ip-addresses/2954/ | jq '.'
 ```
 
 Each attribute of the NetBox object is expressed as a field in the dictionary. Fields may include their own nested objects, as in the case of the `status` field above. Every object includes a primary key named `id` which uniquely identifies it in the database.
+
+# Interactive Documentation
+
+Comprehensive, interactive documentation of all API endpoints is available on a running NetBox instance at `/api/docs/`. This interface provides a convenient sandbox for researching and experimenting with NetBox's various API endpoints and different request types.
 
 # URL Hierarchy
 
@@ -244,7 +246,7 @@ Vary: Accept
 }
 ```
 
-The default page size derives from the [`PAGINATE_COUNT`](../configuration/optional-settings/#paginate_count) configuration setting, which defaults to 50. However, this can be overridden per request by specifying the desired `offset` and `limit` query parameters. For example, if you wish to retrieve a hundred devices at a time, you would make a request for:
+The default page size derives from the [`PAGINATE_COUNT`](../../configuration/optional-settings/#paginate_count) configuration setting, which defaults to 50. However, this can be overridden per request by specifying the desired `offset` and `limit` query parameters. For example, if you wish to retrieve a hundred devices at a time, you would make a request for:
 
 ```
 http://localhost:8000/api/dcim/devices/?limit=100
@@ -261,7 +263,7 @@ The response will return devices 1 through 100. The URL provided in the `next` a
 }
 ```
 
-The maximum number of objects that can be returned is limited by the [`MAX_PAGE_SIZE`](../configuration/optional-settings/#max_page_size) setting, which is 1000 by default. Setting this to `0` or `None` will remove the maximum limit. An API consumer can then pass `?limit=0` to retrieve _all_ matching objects with a single request.
+The maximum number of objects that can be returned is limited by the [`MAX_PAGE_SIZE`](../../configuration/optional-settings/#max_page_size) setting, which is 1000 by default. Setting this to `0` or `None` will remove the maximum limit. An API consumer can then pass `?limit=0` to retrieve _all_ matching objects with a single request.
 
 !!! warning
     Disabling the page size limit introduces a potential for very resource-intensive requests, since one API request can effectively retrieve an entire table from the database.

@@ -1,4 +1,3 @@
-
 # Models which support custom fields
 CUSTOMFIELD_MODELS = [
     'circuits.circuit',
@@ -88,10 +87,12 @@ BUTTON_CLASS_CHOICES = (
 
 # Graph types
 GRAPH_TYPE_INTERFACE = 100
+GRAPH_TYPE_DEVICE = 150
 GRAPH_TYPE_PROVIDER = 200
 GRAPH_TYPE_SITE = 300
 GRAPH_TYPE_CHOICES = (
     (GRAPH_TYPE_INTERFACE, 'Interface'),
+    (GRAPH_TYPE_DEVICE, 'Device'),
     (GRAPH_TYPE_PROVIDER, 'Provider'),
     (GRAPH_TYPE_SITE, 'Site'),
 )
@@ -105,6 +106,7 @@ EXPORTTEMPLATE_MODELS = [
     'dcim.device',
     'dcim.devicetype',
     'dcim.interface',
+    'dcim.inventoryitem',
     'dcim.manufacturer',
     'dcim.powerpanel',
     'dcim.powerport',
