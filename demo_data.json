@@ -561,6 +561,14 @@
     }
 },
 {
+    "model": "sessions.session",
+    "pk": "vpy87e9w28w5ezspav1c9hzj6byhael4",
+    "fields": {
+        "session_data": "MGI4OGFmYzU1ZjU3ZGZjNWRjOWIwYjlkZDIxZmMzOWFlNDJhZmExODp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoidXRpbGl0aWVzLmF1dGhfYmFja2VuZHMuVmlld0V4ZW1wdE1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaGFzaCI6IjA3NWMwZGNlMDAzZmFiZDc0MGFjYzljMjQ3NDRmMzM1NGM1ZjQwYzgifQ==",
+        "expire_date": "2019-12-05T15:53:38.719Z"
+    }
+},
+{
     "model": "dcim.region",
     "pk": 139,
     "fields": {
@@ -615,7 +623,7 @@
         "name": "North America",
         "slug": "north-america",
         "lft": 1,
-        "rght": 26,
+        "rght": 28,
         "tree_id": 4,
         "level": 0
     }
@@ -750,7 +758,7 @@
         "name": "United States",
         "slug": "united-states",
         "lft": 10,
-        "rght": 25,
+        "rght": 27,
         "tree_id": 4,
         "level": 1
     }
@@ -906,6 +914,21 @@
     }
 },
 {
+    "model": "dcim.region",
+    "pk": 162,
+    "fields": {
+        "created": "2019-11-21",
+        "last_updated": "2019-11-21T15:57:12.970Z",
+        "parent": 151,
+        "name": "Virginia",
+        "slug": "virginia",
+        "lft": 25,
+        "rght": 26,
+        "tree_id": 4,
+        "level": 2
+    }
+},
+{
     "model": "dcim.site",
     "pk": 66,
     "fields": {
@@ -935,17 +958,17 @@
     "pk": 67,
     "fields": {
         "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.588Z",
-        "name": "DC1",
-        "slug": "dc1",
+        "last_updated": "2019-11-21T15:57:49.808Z",
+        "name": "Equinix DC10",
+        "slug": "equinix-dc10",
         "status": 1,
-        "region": 158,
+        "region": 162,
         "tenant": null,
         "facility": "",
         "asn": null,
         "time_zone": null,
         "description": "",
-        "physical_address": "9100 Packet Place, New York NY",
+        "physical_address": "21551 Beaumeade Circle\r\nAshburn, VA 20147",
         "shipping_address": "",
         "latitude": null,
         "longitude": null,
@@ -1131,14 +1154,25 @@
     }
 },
 {
+    "model": "dcim.rackgroup",
+    "pk": 1,
+    "fields": {
+        "created": "2019-11-21",
+        "last_updated": "2019-11-21T16:05:15.902Z",
+        "name": "Cage 1200",
+        "slug": "cage-1200",
+        "site": 67
+    }
+},
+{
     "model": "dcim.rackrole",
     "pk": 19,
     "fields": {
         "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.664Z",
+        "last_updated": "2019-11-21T16:07:22.358Z",
         "name": "Network",
         "slug": "network",
-        "color": ""
+        "color": "2f6a31"
     }
 },
 {
@@ -1146,10 +1180,10 @@
     "pk": 20,
     "fields": {
         "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.673Z",
+        "last_updated": "2019-11-21T16:07:15.098Z",
         "name": "Compute",
         "slug": "compute",
-        "color": ""
+        "color": "2196f3"
     }
 },
 {
@@ -1157,10 +1191,10 @@
     "pk": 21,
     "fields": {
         "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.707Z",
+        "last_updated": "2019-11-21T16:07:30.577Z",
         "name": "Storage",
         "slug": "storage",
-        "color": ""
+        "color": "ff9800"
     }
 },
 {
@@ -1168,11 +1202,11 @@
     "pk": 97,
     "fields": {
         "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.668Z",
+        "last_updated": "2019-11-21T16:05:23.719Z",
         "name": "R101",
         "facility_id": "1200:0101",
         "site": 67,
-        "group": null,
+        "group": 1,
         "tenant": null,
         "status": 3,
         "role": 19,
@@ -1193,11 +1227,11 @@
     "pk": 98,
     "fields": {
         "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.676Z",
+        "last_updated": "2019-11-21T16:05:23.780Z",
         "name": "R102",
         "facility_id": "1200:0102",
         "site": 67,
-        "group": null,
+        "group": 1,
         "tenant": null,
         "status": 3,
         "role": 20,
@@ -1218,11 +1252,11 @@
     "pk": 99,
     "fields": {
         "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.682Z",
+        "last_updated": "2019-11-21T16:05:23.840Z",
         "name": "R103",
         "facility_id": "1200:0103",
         "site": 67,
-        "group": null,
+        "group": 1,
         "tenant": null,
         "status": 3,
         "role": 20,
@@ -1243,11 +1277,11 @@
     "pk": 100,
     "fields": {
         "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.689Z",
+        "last_updated": "2019-11-21T16:05:23.902Z",
         "name": "R104",
         "facility_id": "1200:0104",
         "site": 67,
-        "group": null,
+        "group": 1,
         "tenant": null,
         "status": 3,
         "role": 20,
@@ -1268,11 +1302,11 @@
     "pk": 101,
     "fields": {
         "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.696Z",
+        "last_updated": "2019-11-21T16:05:23.962Z",
         "name": "R201",
         "facility_id": "1200:0201",
         "site": 67,
-        "group": null,
+        "group": 1,
         "tenant": null,
         "status": 3,
         "role": 20,
@@ -1293,11 +1327,11 @@
     "pk": 102,
     "fields": {
         "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.702Z",
+        "last_updated": "2019-11-21T16:05:24.022Z",
         "name": "R202",
         "facility_id": "1200:0202",
         "site": 67,
-        "group": null,
+        "group": 1,
         "tenant": null,
         "status": 3,
         "role": 20,
@@ -1318,11 +1352,11 @@
     "pk": 103,
     "fields": {
         "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.710Z",
+        "last_updated": "2019-11-21T16:05:24.081Z",
         "name": "R203",
         "facility_id": "1200:0203",
         "site": 67,
-        "group": null,
+        "group": 1,
         "tenant": null,
         "status": 3,
         "role": 21,
@@ -1343,11 +1377,11 @@
     "pk": 104,
     "fields": {
         "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.716Z",
+        "last_updated": "2019-11-21T16:05:24.141Z",
         "name": "R204",
         "facility_id": "1200:0204",
         "site": 67,
-        "group": null,
+        "group": 1,
         "tenant": null,
         "status": 3,
         "role": 21,
@@ -1381,6 +1415,16 @@
         "last_updated": "2019-08-02T20:11:01.832Z",
         "name": "Cisco",
         "slug": "cisco"
+    }
+},
+{
+    "model": "dcim.manufacturer",
+    "pk": 15,
+    "fields": {
+        "created": "2019-11-21",
+        "last_updated": "2019-11-21T16:00:34.227Z",
+        "name": "Dell",
+        "slug": "dell"
     }
 },
 {
@@ -1448,6 +1492,54 @@
     }
 },
 {
+    "model": "dcim.devicetype",
+    "pk": 29,
+    "fields": {
+        "created": "2019-11-21",
+        "last_updated": "2019-11-21T16:01:01.537Z",
+        "manufacturer": 15,
+        "model": "PowerEdge R640",
+        "slug": "poweredge-r640",
+        "part_number": "",
+        "u_height": 1,
+        "is_full_depth": true,
+        "subdevice_role": null,
+        "comments": ""
+    }
+},
+{
+    "model": "dcim.devicetype",
+    "pk": 30,
+    "fields": {
+        "created": "2019-11-21",
+        "last_updated": "2019-11-21T16:03:20.251Z",
+        "manufacturer": 15,
+        "model": "PowerEdge R740",
+        "slug": "poweredge-r740",
+        "part_number": "",
+        "u_height": 2,
+        "is_full_depth": true,
+        "subdevice_role": null,
+        "comments": ""
+    }
+},
+{
+    "model": "dcim.devicetype",
+    "pk": 31,
+    "fields": {
+        "created": "2019-11-21",
+        "last_updated": "2019-11-21T16:17:42.498Z",
+        "manufacturer": 13,
+        "model": "EX9208",
+        "slug": "ex9208",
+        "part_number": "",
+        "u_height": 8,
+        "is_full_depth": true,
+        "subdevice_role": null,
+        "comments": ""
+    }
+},
+{
     "model": "dcim.consoleporttemplate",
     "pk": 25,
     "fields": {
@@ -1477,6 +1569,38 @@
     "fields": {
         "device_type": 28,
         "name": "Console"
+    }
+},
+{
+    "model": "dcim.consoleporttemplate",
+    "pk": 29,
+    "fields": {
+        "device_type": 29,
+        "name": "Console"
+    }
+},
+{
+    "model": "dcim.consoleporttemplate",
+    "pk": 30,
+    "fields": {
+        "device_type": 30,
+        "name": "Console"
+    }
+},
+{
+    "model": "dcim.consoleporttemplate",
+    "pk": 31,
+    "fields": {
+        "device_type": 31,
+        "name": "Console 0"
+    }
+},
+{
+    "model": "dcim.consoleporttemplate",
+    "pk": 32,
+    "fields": {
+        "device_type": 31,
+        "name": "Console 1"
     }
 },
 {
@@ -1557,6 +1681,86 @@
         "name": "PSU2",
         "maximum_draw": null,
         "allocated_draw": null
+    }
+},
+{
+    "model": "dcim.powerporttemplate",
+    "pk": 57,
+    "fields": {
+        "device_type": 29,
+        "name": "PSU1",
+        "maximum_draw": 1000,
+        "allocated_draw": 500
+    }
+},
+{
+    "model": "dcim.powerporttemplate",
+    "pk": 58,
+    "fields": {
+        "device_type": 29,
+        "name": "PSU2",
+        "maximum_draw": 1000,
+        "allocated_draw": 500
+    }
+},
+{
+    "model": "dcim.powerporttemplate",
+    "pk": 59,
+    "fields": {
+        "device_type": 30,
+        "name": "PSU1",
+        "maximum_draw": 1200,
+        "allocated_draw": 600
+    }
+},
+{
+    "model": "dcim.powerporttemplate",
+    "pk": 60,
+    "fields": {
+        "device_type": 30,
+        "name": "PSU2",
+        "maximum_draw": 1200,
+        "allocated_draw": 600
+    }
+},
+{
+    "model": "dcim.powerporttemplate",
+    "pk": 61,
+    "fields": {
+        "device_type": 31,
+        "name": "PEM0",
+        "maximum_draw": 2000,
+        "allocated_draw": 1500
+    }
+},
+{
+    "model": "dcim.powerporttemplate",
+    "pk": 62,
+    "fields": {
+        "device_type": 31,
+        "name": "PEM1",
+        "maximum_draw": 2000,
+        "allocated_draw": 1500
+    }
+},
+{
+    "model": "dcim.powerporttemplate",
+    "pk": 63,
+    "fields": {
+        "device_type": 31,
+        "name": "PEM2",
+        "maximum_draw": 2000,
+        "allocated_draw": 1500
+    }
+},
+{
+    "model": "dcim.powerporttemplate",
+    "pk": 64,
+    "fields": {
+        "device_type": 31,
+        "name": "PEM3",
+        "maximum_draw": 2000,
+        "allocated_draw": 1500
     }
 },
 {
@@ -2321,246 +2525,6 @@
 },
 {
     "model": "dcim.interfacetemplate",
-    "pk": 965,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/24",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 966,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/25",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 967,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/26",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 968,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/27",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 969,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/28",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 970,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/29",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 971,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/30",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 972,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/31",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 973,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/32",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 974,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/33",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 975,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/34",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 976,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/35",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 977,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/36",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 978,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/37",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 979,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/38",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 980,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/39",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 981,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/40",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 982,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/41",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 983,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/42",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 984,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/43",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 985,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/44",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 986,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/45",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 987,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/46",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
-    "pk": 988,
-    "fields": {
-        "device_type": 27,
-        "name": "et-0/0/47",
-        "type": 1400,
-        "mgmt_only": false
-    }
-},
-{
-    "model": "dcim.interfacetemplate",
     "pk": 989,
     "fields": {
         "device_type": 28,
@@ -3040,15 +3004,187 @@
     }
 },
 {
+    "model": "dcim.interfacetemplate",
+    "pk": 1037,
+    "fields": {
+        "device_type": 29,
+        "name": "eth0",
+        "type": 1200,
+        "mgmt_only": false
+    }
+},
+{
+    "model": "dcim.interfacetemplate",
+    "pk": 1038,
+    "fields": {
+        "device_type": 29,
+        "name": "eth1",
+        "type": 1200,
+        "mgmt_only": false
+    }
+},
+{
+    "model": "dcim.interfacetemplate",
+    "pk": 1039,
+    "fields": {
+        "device_type": 29,
+        "name": "eth2",
+        "type": 1200,
+        "mgmt_only": false
+    }
+},
+{
+    "model": "dcim.interfacetemplate",
+    "pk": 1040,
+    "fields": {
+        "device_type": 29,
+        "name": "eth3",
+        "type": 1200,
+        "mgmt_only": false
+    }
+},
+{
+    "model": "dcim.interfacetemplate",
+    "pk": 1041,
+    "fields": {
+        "device_type": 29,
+        "name": "mgmt0",
+        "type": 1000,
+        "mgmt_only": true
+    }
+},
+{
+    "model": "dcim.interfacetemplate",
+    "pk": 1042,
+    "fields": {
+        "device_type": 30,
+        "name": "eth0",
+        "type": 1200,
+        "mgmt_only": false
+    }
+},
+{
+    "model": "dcim.interfacetemplate",
+    "pk": 1043,
+    "fields": {
+        "device_type": 30,
+        "name": "eth1",
+        "type": 1200,
+        "mgmt_only": false
+    }
+},
+{
+    "model": "dcim.interfacetemplate",
+    "pk": 1044,
+    "fields": {
+        "device_type": 30,
+        "name": "eth2",
+        "type": 1200,
+        "mgmt_only": false
+    }
+},
+{
+    "model": "dcim.interfacetemplate",
+    "pk": 1045,
+    "fields": {
+        "device_type": 30,
+        "name": "eth3",
+        "type": 1200,
+        "mgmt_only": false
+    }
+},
+{
+    "model": "dcim.interfacetemplate",
+    "pk": 1046,
+    "fields": {
+        "device_type": 30,
+        "name": "mgmt0",
+        "type": 1000,
+        "mgmt_only": true
+    }
+},
+{
     "model": "dcim.devicerole",
     "pk": 4,
     "fields": {
         "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.871Z",
+        "last_updated": "2019-11-21T16:08:46.506Z",
         "name": "Edge Router",
         "slug": "edge-router",
-        "color": "",
-        "vm_role": true
+        "color": "9c27b0",
+        "vm_role": false
+    }
+},
+{
+    "model": "dcim.devicerole",
+    "pk": 5,
+    "fields": {
+        "created": "2019-11-21",
+        "last_updated": "2019-11-21T16:08:16.984Z",
+        "name": "Core Switch",
+        "slug": "core-switch",
+        "color": "3f51b5",
+        "vm_role": false
+    }
+},
+{
+    "model": "dcim.devicerole",
+    "pk": 6,
+    "fields": {
+        "created": "2019-11-21",
+        "last_updated": "2019-11-21T16:08:35.380Z",
+        "name": "Firewall",
+        "slug": "firewall",
+        "color": "f44336",
+        "vm_role": false
+    }
+},
+{
+    "model": "dcim.devicerole",
+    "pk": 7,
+    "fields": {
+        "created": "2019-11-21",
+        "last_updated": "2019-11-21T16:09:18.844Z",
+        "name": "Compute",
+        "slug": "compute",
+        "color": "607d8b",
+        "vm_role": false
+    }
+},
+{
+    "model": "dcim.devicerole",
+    "pk": 8,
+    "fields": {
+        "created": "2019-11-21",
+        "last_updated": "2019-11-21T16:09:35.880Z",
+        "name": "Storage",
+        "slug": "storage",
+        "color": "ffc107",
+        "vm_role": false
+    }
+},
+{
+    "model": "dcim.devicerole",
+    "pk": 9,
+    "fields": {
+        "created": "2019-11-21",
+        "last_updated": "2019-11-21T16:10:03.600Z",
+        "name": "Access Switch",
+        "slug": "access-switch",
+        "color": "03a9f4",
+        "vm_role": false
+    }
+},
+{
+    "model": "dcim.devicerole",
+    "pk": 10,
+    "fields": {
+        "created": "2019-11-21",
+        "last_updated": "2019-11-21T16:10:33.313Z",
+        "name": "OOB Network",
+        "slug": "oob-network",
+        "color": "ff66ff",
+        "vm_role": false
     }
 },
 {
@@ -3070,7 +3206,7 @@
     "fields": {
         "local_context_data": null,
         "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.876Z",
+        "last_updated": "2019-11-21T16:13:56.155Z",
         "device_type": 25,
         "device_role": 4,
         "tenant": null,
@@ -3080,8 +3216,8 @@
         "asset_tag": null,
         "site": 67,
         "rack": 97,
-        "position": 10,
-        "face": null,
+        "position": 20,
+        "face": 0,
         "status": 1,
         "primary_ip4": null,
         "primary_ip6": null,
@@ -3098,7 +3234,7 @@
     "fields": {
         "local_context_data": null,
         "created": "2019-08-02",
-        "last_updated": "2019-08-02T20:11:01.913Z",
+        "last_updated": "2019-11-21T16:14:03.587Z",
         "device_type": 25,
         "device_role": 4,
         "tenant": null,
@@ -3107,9 +3243,9 @@
         "serial": "",
         "asset_tag": null,
         "site": 67,
-        "rack": 97,
-        "position": 15,
-        "face": null,
+        "rack": 98,
+        "position": 20,
+        "face": 0,
         "status": 1,
         "primary_ip4": null,
         "primary_ip6": null,
@@ -6803,7 +6939,7 @@
     "model": "auth.user",
     "fields": {
         "password": "pbkdf2_sha256$150000$8X6FHnT5U0vC$Xg5oc9TrHCE1HYfBTQL1Mnr+WObSNwwbwPLtjmOD4JI=",
-        "last_login": "2019-09-05T19:47:57.761Z",
+        "last_login": "2019-11-21T15:53:38.694Z",
         "is_superuser": true,
         "username": "admin",
         "first_name": "",
@@ -7309,6 +7445,2621 @@
             "custom_fields": {},
             "physical_address": "",
             "shipping_address": ""
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 13,
+    "fields": {
+        "time": "2019-11-21T15:57:12.984Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "d52edfcc-5d17-46c3-a630-e1207a2ebc88",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "region"
+        ],
+        "changed_object_id": 162,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Virginia",
+        "object_data": {
+            "lft": 25,
+            "name": "Virginia",
+            "rght": 26,
+            "slug": "virginia",
+            "level": 2,
+            "parent": 151,
+            "created": "2019-11-21",
+            "tree_id": 4,
+            "last_updated": "2019-11-21T15:57:12.970Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 14,
+    "fields": {
+        "time": "2019-11-21T15:57:49.866Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "a11668f2-9058-404a-8efc-4069508d8857",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "site"
+        ],
+        "changed_object_id": 67,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Equinix DC10",
+        "object_data": {
+            "asn": null,
+            "name": "Equinix DC10",
+            "slug": "equinix-dc10",
+            "tags": [],
+            "region": 162,
+            "status": 1,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "facility": "",
+            "latitude": null,
+            "longitude": null,
+            "time_zone": "",
+            "description": "",
+            "contact_name": "",
+            "last_updated": "2019-11-21T15:57:49.808Z",
+            "contact_email": "",
+            "contact_phone": "",
+            "custom_fields": {},
+            "physical_address": "21551 Beaumeade Circle\r\nAshburn, VA 20147",
+            "shipping_address": ""
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 15,
+    "fields": {
+        "time": "2019-11-21T15:59:39.113Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 965,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/24",
+        "object_data": {
+            "name": "et-0/0/24",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 16,
+    "fields": {
+        "time": "2019-11-21T15:59:39.127Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 966,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/25",
+        "object_data": {
+            "name": "et-0/0/25",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 17,
+    "fields": {
+        "time": "2019-11-21T15:59:39.139Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 967,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/26",
+        "object_data": {
+            "name": "et-0/0/26",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 18,
+    "fields": {
+        "time": "2019-11-21T15:59:39.152Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 968,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/27",
+        "object_data": {
+            "name": "et-0/0/27",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 19,
+    "fields": {
+        "time": "2019-11-21T15:59:39.165Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 969,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/28",
+        "object_data": {
+            "name": "et-0/0/28",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 20,
+    "fields": {
+        "time": "2019-11-21T15:59:39.177Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 970,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/29",
+        "object_data": {
+            "name": "et-0/0/29",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 21,
+    "fields": {
+        "time": "2019-11-21T15:59:39.189Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 971,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/30",
+        "object_data": {
+            "name": "et-0/0/30",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 22,
+    "fields": {
+        "time": "2019-11-21T15:59:39.207Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 972,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/31",
+        "object_data": {
+            "name": "et-0/0/31",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 23,
+    "fields": {
+        "time": "2019-11-21T15:59:39.221Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 973,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/32",
+        "object_data": {
+            "name": "et-0/0/32",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 24,
+    "fields": {
+        "time": "2019-11-21T15:59:39.233Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 974,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/33",
+        "object_data": {
+            "name": "et-0/0/33",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 25,
+    "fields": {
+        "time": "2019-11-21T15:59:39.246Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 975,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/34",
+        "object_data": {
+            "name": "et-0/0/34",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 26,
+    "fields": {
+        "time": "2019-11-21T15:59:39.259Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 976,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/35",
+        "object_data": {
+            "name": "et-0/0/35",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 27,
+    "fields": {
+        "time": "2019-11-21T15:59:39.273Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 977,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/36",
+        "object_data": {
+            "name": "et-0/0/36",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 28,
+    "fields": {
+        "time": "2019-11-21T15:59:39.285Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 978,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/37",
+        "object_data": {
+            "name": "et-0/0/37",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 29,
+    "fields": {
+        "time": "2019-11-21T15:59:39.297Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 979,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/38",
+        "object_data": {
+            "name": "et-0/0/38",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 30,
+    "fields": {
+        "time": "2019-11-21T15:59:39.308Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 980,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/39",
+        "object_data": {
+            "name": "et-0/0/39",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 31,
+    "fields": {
+        "time": "2019-11-21T15:59:39.325Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 981,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/40",
+        "object_data": {
+            "name": "et-0/0/40",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 32,
+    "fields": {
+        "time": "2019-11-21T15:59:39.341Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 982,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/41",
+        "object_data": {
+            "name": "et-0/0/41",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 33,
+    "fields": {
+        "time": "2019-11-21T15:59:39.355Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 983,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/42",
+        "object_data": {
+            "name": "et-0/0/42",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 34,
+    "fields": {
+        "time": "2019-11-21T15:59:39.370Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 984,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/43",
+        "object_data": {
+            "name": "et-0/0/43",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 35,
+    "fields": {
+        "time": "2019-11-21T15:59:39.384Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 985,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/44",
+        "object_data": {
+            "name": "et-0/0/44",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 36,
+    "fields": {
+        "time": "2019-11-21T15:59:39.397Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 986,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/45",
+        "object_data": {
+            "name": "et-0/0/45",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 37,
+    "fields": {
+        "time": "2019-11-21T15:59:39.409Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 987,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/46",
+        "object_data": {
+            "name": "et-0/0/46",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 38,
+    "fields": {
+        "time": "2019-11-21T15:59:39.422Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "951c2266-d906-4247-8430-2bcd6abcf55c",
+        "action": 3,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 988,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 27,
+        "object_repr": "et-0/0/47",
+        "object_data": {
+            "name": "et-0/0/47",
+            "type": 1400,
+            "mgmt_only": false,
+            "device_type": 27
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 39,
+    "fields": {
+        "time": "2019-11-21T16:00:34.246Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "c57a8b17-bf49-40b9-b248-c27e9d53bf82",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "manufacturer"
+        ],
+        "changed_object_id": 15,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Dell",
+        "object_data": {
+            "name": "Dell",
+            "slug": "dell",
+            "created": "2019-11-21",
+            "last_updated": "2019-11-21T16:00:34.227Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 40,
+    "fields": {
+        "time": "2019-11-21T16:01:01.585Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "b14b862e-00d9-433b-b854-2de720589a9b",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "changed_object_id": 29,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "PowerEdge R640",
+        "object_data": {
+            "slug": "poweredge-r640",
+            "tags": [],
+            "model": "PowerEdge R640",
+            "created": "2019-11-21",
+            "comments": "",
+            "u_height": 1,
+            "part_number": "",
+            "last_updated": "2019-11-21T16:01:01.537Z",
+            "manufacturer": 15,
+            "custom_fields": {},
+            "is_full_depth": true,
+            "subdevice_role": null
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 41,
+    "fields": {
+        "time": "2019-11-21T16:01:35.789Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "7778edad-e636-4284-8553-654bbef9fd48",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "consoleporttemplate"
+        ],
+        "changed_object_id": 29,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 29,
+        "object_repr": "Console",
+        "object_data": {
+            "name": "Console",
+            "device_type": 29
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 42,
+    "fields": {
+        "time": "2019-11-21T16:01:51.650Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "25217b79-1852-4165-994d-294dfcb2c495",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "powerporttemplate"
+        ],
+        "changed_object_id": 57,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 29,
+        "object_repr": "PSU1",
+        "object_data": {
+            "name": "PSU1",
+            "device_type": 29,
+            "maximum_draw": 1000,
+            "allocated_draw": 500
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 43,
+    "fields": {
+        "time": "2019-11-21T16:01:51.661Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "25217b79-1852-4165-994d-294dfcb2c495",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "powerporttemplate"
+        ],
+        "changed_object_id": 58,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 29,
+        "object_repr": "PSU2",
+        "object_data": {
+            "name": "PSU2",
+            "device_type": 29,
+            "maximum_draw": 1000,
+            "allocated_draw": 500
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 44,
+    "fields": {
+        "time": "2019-11-21T16:02:10.415Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "4300dcce-a812-427f-950d-13079231b0d3",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 1037,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 29,
+        "object_repr": "eth0",
+        "object_data": {
+            "name": "eth0",
+            "type": 1200,
+            "mgmt_only": false,
+            "device_type": 29
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 45,
+    "fields": {
+        "time": "2019-11-21T16:02:10.423Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "4300dcce-a812-427f-950d-13079231b0d3",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 1038,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 29,
+        "object_repr": "eth1",
+        "object_data": {
+            "name": "eth1",
+            "type": 1200,
+            "mgmt_only": false,
+            "device_type": 29
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 46,
+    "fields": {
+        "time": "2019-11-21T16:02:10.430Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "4300dcce-a812-427f-950d-13079231b0d3",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 1039,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 29,
+        "object_repr": "eth2",
+        "object_data": {
+            "name": "eth2",
+            "type": 1200,
+            "mgmt_only": false,
+            "device_type": 29
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 47,
+    "fields": {
+        "time": "2019-11-21T16:02:10.438Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "4300dcce-a812-427f-950d-13079231b0d3",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 1040,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 29,
+        "object_repr": "eth3",
+        "object_data": {
+            "name": "eth3",
+            "type": 1200,
+            "mgmt_only": false,
+            "device_type": 29
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 48,
+    "fields": {
+        "time": "2019-11-21T16:02:22.496Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "5fccb4f4-7783-4944-8d20-3db2f7445c01",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 1041,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 29,
+        "object_repr": "mgmt0",
+        "object_data": {
+            "name": "mgmt0",
+            "type": 1000,
+            "mgmt_only": true,
+            "device_type": 29
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 49,
+    "fields": {
+        "time": "2019-11-21T16:03:20.298Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "b4139d0e-9120-4539-b91d-5cdcc97c0b94",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "changed_object_id": 30,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "PowerEdge R740",
+        "object_data": {
+            "slug": "poweredge-r740",
+            "tags": [],
+            "model": "PowerEdge R740",
+            "created": "2019-11-21",
+            "comments": "",
+            "u_height": 2,
+            "part_number": "",
+            "last_updated": "2019-11-21T16:03:20.251Z",
+            "manufacturer": 15,
+            "custom_fields": {},
+            "is_full_depth": true,
+            "subdevice_role": null
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 50,
+    "fields": {
+        "time": "2019-11-21T16:03:27.083Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "871d84b1-a01d-4b65-b3af-62b3b19404a1",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "consoleporttemplate"
+        ],
+        "changed_object_id": 30,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 30,
+        "object_repr": "Console",
+        "object_data": {
+            "name": "Console",
+            "device_type": 30
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 51,
+    "fields": {
+        "time": "2019-11-21T16:03:41.719Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "cd9e49b3-d82d-4d82-aaa9-2410543a61f4",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "powerporttemplate"
+        ],
+        "changed_object_id": 59,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 30,
+        "object_repr": "PSU1",
+        "object_data": {
+            "name": "PSU1",
+            "device_type": 30,
+            "maximum_draw": 1200,
+            "allocated_draw": 600
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 52,
+    "fields": {
+        "time": "2019-11-21T16:03:41.727Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "cd9e49b3-d82d-4d82-aaa9-2410543a61f4",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "powerporttemplate"
+        ],
+        "changed_object_id": 60,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 30,
+        "object_repr": "PSU2",
+        "object_data": {
+            "name": "PSU2",
+            "device_type": 30,
+            "maximum_draw": 1200,
+            "allocated_draw": 600
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 53,
+    "fields": {
+        "time": "2019-11-21T16:03:55.890Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "00ac92db-49f6-4210-a6cc-83406b93a01e",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 1042,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 30,
+        "object_repr": "eth0",
+        "object_data": {
+            "name": "eth0",
+            "type": 1200,
+            "mgmt_only": false,
+            "device_type": 30
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 54,
+    "fields": {
+        "time": "2019-11-21T16:03:55.898Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "00ac92db-49f6-4210-a6cc-83406b93a01e",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 1043,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 30,
+        "object_repr": "eth1",
+        "object_data": {
+            "name": "eth1",
+            "type": 1200,
+            "mgmt_only": false,
+            "device_type": 30
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 55,
+    "fields": {
+        "time": "2019-11-21T16:03:55.905Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "00ac92db-49f6-4210-a6cc-83406b93a01e",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 1044,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 30,
+        "object_repr": "eth2",
+        "object_data": {
+            "name": "eth2",
+            "type": 1200,
+            "mgmt_only": false,
+            "device_type": 30
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 56,
+    "fields": {
+        "time": "2019-11-21T16:03:55.911Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "00ac92db-49f6-4210-a6cc-83406b93a01e",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 1045,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 30,
+        "object_repr": "eth3",
+        "object_data": {
+            "name": "eth3",
+            "type": 1200,
+            "mgmt_only": false,
+            "device_type": 30
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 57,
+    "fields": {
+        "time": "2019-11-21T16:04:04.404Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "6e50a645-1a65-4710-a0b4-ec158e61aac7",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "interfacetemplate"
+        ],
+        "changed_object_id": 1046,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 30,
+        "object_repr": "mgmt0",
+        "object_data": {
+            "name": "mgmt0",
+            "type": 1000,
+            "mgmt_only": true,
+            "device_type": 30
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 58,
+    "fields": {
+        "time": "2019-11-21T16:04:48.969Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "30d6c76c-cfa9-4a1a-8d68-f0c530a70cd7",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "rackgroup"
+        ],
+        "changed_object_id": 1,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Cage 01:4200",
+        "object_data": {
+            "name": "Cage 01:4200",
+            "site": 67,
+            "slug": "cage-4200",
+            "created": "2019-11-21",
+            "last_updated": "2019-11-21T16:04:48.956Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 59,
+    "fields": {
+        "time": "2019-11-21T16:05:15.913Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "09ddf3b8-16bd-4ba7-965e-902765f37be2",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "rackgroup"
+        ],
+        "changed_object_id": 1,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Cage 1200",
+        "object_data": {
+            "name": "Cage 1200",
+            "site": 67,
+            "slug": "cage-1200",
+            "created": "2019-11-21",
+            "last_updated": "2019-11-21T16:05:15.902Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 60,
+    "fields": {
+        "time": "2019-11-21T16:05:24.194Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "31055a8a-12dd-42a8-8911-f813bdb1e652",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "rack"
+        ],
+        "changed_object_id": 97,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "R101 (1200:0101)",
+        "object_data": {
+            "name": "R101",
+            "role": 19,
+            "site": 67,
+            "tags": [],
+            "type": null,
+            "group": 1,
+            "width": 19,
+            "serial": "",
+            "status": 3,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "u_height": 48,
+            "asset_tag": null,
+            "desc_units": false,
+            "outer_unit": null,
+            "facility_id": "1200:0101",
+            "outer_depth": null,
+            "outer_width": null,
+            "last_updated": "2019-11-21T16:05:23.719Z",
+            "custom_fields": {}
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 61,
+    "fields": {
+        "time": "2019-11-21T16:05:24.243Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "31055a8a-12dd-42a8-8911-f813bdb1e652",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "rack"
+        ],
+        "changed_object_id": 98,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "R102 (1200:0102)",
+        "object_data": {
+            "name": "R102",
+            "role": 20,
+            "site": 67,
+            "tags": [],
+            "type": null,
+            "group": 1,
+            "width": 19,
+            "serial": "",
+            "status": 3,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "u_height": 48,
+            "asset_tag": null,
+            "desc_units": false,
+            "outer_unit": null,
+            "facility_id": "1200:0102",
+            "outer_depth": null,
+            "outer_width": null,
+            "last_updated": "2019-11-21T16:05:23.780Z",
+            "custom_fields": {}
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 62,
+    "fields": {
+        "time": "2019-11-21T16:05:24.290Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "31055a8a-12dd-42a8-8911-f813bdb1e652",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "rack"
+        ],
+        "changed_object_id": 99,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "R103 (1200:0103)",
+        "object_data": {
+            "name": "R103",
+            "role": 20,
+            "site": 67,
+            "tags": [],
+            "type": null,
+            "group": 1,
+            "width": 19,
+            "serial": "",
+            "status": 3,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "u_height": 48,
+            "asset_tag": null,
+            "desc_units": false,
+            "outer_unit": null,
+            "facility_id": "1200:0103",
+            "outer_depth": null,
+            "outer_width": null,
+            "last_updated": "2019-11-21T16:05:23.840Z",
+            "custom_fields": {}
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 63,
+    "fields": {
+        "time": "2019-11-21T16:05:24.337Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "31055a8a-12dd-42a8-8911-f813bdb1e652",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "rack"
+        ],
+        "changed_object_id": 100,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "R104 (1200:0104)",
+        "object_data": {
+            "name": "R104",
+            "role": 20,
+            "site": 67,
+            "tags": [],
+            "type": null,
+            "group": 1,
+            "width": 19,
+            "serial": "",
+            "status": 3,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "u_height": 48,
+            "asset_tag": null,
+            "desc_units": false,
+            "outer_unit": null,
+            "facility_id": "1200:0104",
+            "outer_depth": null,
+            "outer_width": null,
+            "last_updated": "2019-11-21T16:05:23.902Z",
+            "custom_fields": {}
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 64,
+    "fields": {
+        "time": "2019-11-21T16:05:24.385Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "31055a8a-12dd-42a8-8911-f813bdb1e652",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "rack"
+        ],
+        "changed_object_id": 101,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "R201 (1200:0201)",
+        "object_data": {
+            "name": "R201",
+            "role": 20,
+            "site": 67,
+            "tags": [],
+            "type": null,
+            "group": 1,
+            "width": 19,
+            "serial": "",
+            "status": 3,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "u_height": 48,
+            "asset_tag": null,
+            "desc_units": false,
+            "outer_unit": null,
+            "facility_id": "1200:0201",
+            "outer_depth": null,
+            "outer_width": null,
+            "last_updated": "2019-11-21T16:05:23.962Z",
+            "custom_fields": {}
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 65,
+    "fields": {
+        "time": "2019-11-21T16:05:24.433Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "31055a8a-12dd-42a8-8911-f813bdb1e652",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "rack"
+        ],
+        "changed_object_id": 102,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "R202 (1200:0202)",
+        "object_data": {
+            "name": "R202",
+            "role": 20,
+            "site": 67,
+            "tags": [],
+            "type": null,
+            "group": 1,
+            "width": 19,
+            "serial": "",
+            "status": 3,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "u_height": 48,
+            "asset_tag": null,
+            "desc_units": false,
+            "outer_unit": null,
+            "facility_id": "1200:0202",
+            "outer_depth": null,
+            "outer_width": null,
+            "last_updated": "2019-11-21T16:05:24.022Z",
+            "custom_fields": {}
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 66,
+    "fields": {
+        "time": "2019-11-21T16:05:24.481Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "31055a8a-12dd-42a8-8911-f813bdb1e652",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "rack"
+        ],
+        "changed_object_id": 103,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "R203 (1200:0203)",
+        "object_data": {
+            "name": "R203",
+            "role": 21,
+            "site": 67,
+            "tags": [],
+            "type": null,
+            "group": 1,
+            "width": 19,
+            "serial": "",
+            "status": 3,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "u_height": 48,
+            "asset_tag": null,
+            "desc_units": false,
+            "outer_unit": null,
+            "facility_id": "1200:0203",
+            "outer_depth": null,
+            "outer_width": null,
+            "last_updated": "2019-11-21T16:05:24.081Z",
+            "custom_fields": {}
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 67,
+    "fields": {
+        "time": "2019-11-21T16:05:24.510Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "31055a8a-12dd-42a8-8911-f813bdb1e652",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "rack"
+        ],
+        "changed_object_id": 104,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "R204 (1200:0204)",
+        "object_data": {
+            "name": "R204",
+            "role": 21,
+            "site": 67,
+            "tags": [],
+            "type": null,
+            "group": 1,
+            "width": 19,
+            "serial": "",
+            "status": 3,
+            "tenant": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "u_height": 48,
+            "asset_tag": null,
+            "desc_units": false,
+            "outer_unit": null,
+            "facility_id": "1200:0204",
+            "outer_depth": null,
+            "outer_width": null,
+            "last_updated": "2019-11-21T16:05:24.141Z",
+            "custom_fields": {}
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 68,
+    "fields": {
+        "time": "2019-11-21T16:07:15.120Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "9a18a90f-0b30-4c9a-aa1f-d7e503c1fdf6",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "rackrole"
+        ],
+        "changed_object_id": 20,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Compute",
+        "object_data": {
+            "name": "Compute",
+            "slug": "compute",
+            "color": "2196f3",
+            "created": "2019-08-02",
+            "last_updated": "2019-11-21T16:07:15.098Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 69,
+    "fields": {
+        "time": "2019-11-21T16:07:22.372Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "e71a241d-89b4-4285-8854-9e8c6748173b",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "rackrole"
+        ],
+        "changed_object_id": 19,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Network",
+        "object_data": {
+            "name": "Network",
+            "slug": "network",
+            "color": "2f6a31",
+            "created": "2019-08-02",
+            "last_updated": "2019-11-21T16:07:22.358Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 70,
+    "fields": {
+        "time": "2019-11-21T16:07:30.593Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "27946a14-65c6-4a8f-a1a0-229b6276f343",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "rackrole"
+        ],
+        "changed_object_id": 21,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Storage",
+        "object_data": {
+            "name": "Storage",
+            "slug": "storage",
+            "color": "ff9800",
+            "created": "2019-08-02",
+            "last_updated": "2019-11-21T16:07:30.577Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 71,
+    "fields": {
+        "time": "2019-11-21T16:07:44.746Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "d03bb0c9-77f3-4367-b5dd-c0ea0962342b",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "devicerole"
+        ],
+        "changed_object_id": 4,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Edge Router",
+        "object_data": {
+            "name": "Edge Router",
+            "slug": "edge-router",
+            "color": "aa1409",
+            "created": "2019-08-02",
+            "vm_role": true,
+            "last_updated": "2019-11-21T16:07:44.729Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 72,
+    "fields": {
+        "time": "2019-11-21T16:08:16.996Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "aba132c6-59a0-49b8-8bac-1b1ce1733be0",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "devicerole"
+        ],
+        "changed_object_id": 5,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Core Switch",
+        "object_data": {
+            "name": "Core Switch",
+            "slug": "core-switch",
+            "color": "3f51b5",
+            "created": "2019-11-21",
+            "vm_role": false,
+            "last_updated": "2019-11-21T16:08:16.984Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 73,
+    "fields": {
+        "time": "2019-11-21T16:08:35.392Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "c6ceb5a0-2fe1-4a72-912c-aac0650493c8",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "devicerole"
+        ],
+        "changed_object_id": 6,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Firewall",
+        "object_data": {
+            "name": "Firewall",
+            "slug": "firewall",
+            "color": "f44336",
+            "created": "2019-11-21",
+            "vm_role": false,
+            "last_updated": "2019-11-21T16:08:35.380Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 74,
+    "fields": {
+        "time": "2019-11-21T16:08:41.997Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "10d8347a-7a24-4636-b8ce-9c0507aa9b55",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "devicerole"
+        ],
+        "changed_object_id": 4,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Edge Router",
+        "object_data": {
+            "name": "Edge Router",
+            "slug": "edge-router",
+            "color": "9c27b0",
+            "created": "2019-08-02",
+            "vm_role": true,
+            "last_updated": "2019-11-21T16:08:41.979Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 75,
+    "fields": {
+        "time": "2019-11-21T16:08:46.523Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "e31b3ad0-7a6c-4b81-bd03-c77604e64fa9",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "devicerole"
+        ],
+        "changed_object_id": 4,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Edge Router",
+        "object_data": {
+            "name": "Edge Router",
+            "slug": "edge-router",
+            "color": "9c27b0",
+            "created": "2019-08-02",
+            "vm_role": false,
+            "last_updated": "2019-11-21T16:08:46.506Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 76,
+    "fields": {
+        "time": "2019-11-21T16:09:18.855Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "7125ecec-01f4-4c5e-80b8-12ec46eefa3e",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "devicerole"
+        ],
+        "changed_object_id": 7,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Compute",
+        "object_data": {
+            "name": "Compute",
+            "slug": "compute",
+            "color": "607d8b",
+            "created": "2019-11-21",
+            "vm_role": false,
+            "last_updated": "2019-11-21T16:09:18.844Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 77,
+    "fields": {
+        "time": "2019-11-21T16:09:35.891Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "9e63f33d-1671-478f-a0c4-d8770e8076e7",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "devicerole"
+        ],
+        "changed_object_id": 8,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Storage",
+        "object_data": {
+            "name": "Storage",
+            "slug": "storage",
+            "color": "ffc107",
+            "created": "2019-11-21",
+            "vm_role": false,
+            "last_updated": "2019-11-21T16:09:35.880Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 78,
+    "fields": {
+        "time": "2019-11-21T16:10:03.608Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "5fdd679f-9f77-4f89-9ff2-6542eb1932d1",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "devicerole"
+        ],
+        "changed_object_id": 9,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "Access Switch",
+        "object_data": {
+            "name": "Access Switch",
+            "slug": "access-switch",
+            "color": "03a9f4",
+            "created": "2019-11-21",
+            "vm_role": false,
+            "last_updated": "2019-11-21T16:10:03.600Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 79,
+    "fields": {
+        "time": "2019-11-21T16:10:33.325Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "3152b541-2629-4eb5-b4db-4aee24f668c5",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "devicerole"
+        ],
+        "changed_object_id": 10,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "OOB Network",
+        "object_data": {
+            "name": "OOB Network",
+            "slug": "oob-network",
+            "color": "ff66ff",
+            "created": "2019-11-21",
+            "vm_role": false,
+            "last_updated": "2019-11-21T16:10:33.313Z"
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 80,
+    "fields": {
+        "time": "2019-11-21T16:11:50.753Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "4aee3c0f-df45-419c-b71b-7908842d1052",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "device"
+        ],
+        "changed_object_id": 5,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "dc1-edge1",
+        "object_data": {
+            "face": 0,
+            "name": "dc1-edge1",
+            "rack": 97,
+            "site": 67,
+            "tags": [],
+            "serial": "",
+            "status": 1,
+            "tenant": null,
+            "cluster": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "platform": 3,
+            "position": 10,
+            "asset_tag": null,
+            "device_role": 4,
+            "device_type": 25,
+            "primary_ip4": null,
+            "primary_ip6": null,
+            "vc_position": null,
+            "vc_priority": null,
+            "last_updated": "2019-11-21T16:11:50.695Z",
+            "custom_fields": {},
+            "virtual_chassis": null,
+            "local_context_data": null
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 81,
+    "fields": {
+        "time": "2019-11-21T16:12:06.790Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "61670fc3-f842-4949-b282-dd515446089a",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "device"
+        ],
+        "changed_object_id": 6,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "dc1-edge2",
+        "object_data": {
+            "face": 0,
+            "name": "dc1-edge2",
+            "rack": 97,
+            "site": 67,
+            "tags": [],
+            "serial": "",
+            "status": 1,
+            "tenant": null,
+            "cluster": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "platform": 3,
+            "position": 15,
+            "asset_tag": null,
+            "device_role": 4,
+            "device_type": 25,
+            "primary_ip4": null,
+            "primary_ip6": null,
+            "vc_position": null,
+            "vc_priority": null,
+            "last_updated": "2019-11-21T16:12:06.701Z",
+            "custom_fields": {},
+            "virtual_chassis": null,
+            "local_context_data": null
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 82,
+    "fields": {
+        "time": "2019-11-21T16:13:23.567Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "a4b932e9-2d8a-4ccb-a2db-dc7e9f8cccbe",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "device"
+        ],
+        "changed_object_id": 6,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "dc1-edge2",
+        "object_data": {
+            "face": 0,
+            "name": "dc1-edge2",
+            "rack": 98,
+            "site": 67,
+            "tags": [],
+            "serial": "",
+            "status": 1,
+            "tenant": null,
+            "cluster": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "platform": 3,
+            "position": 15,
+            "asset_tag": null,
+            "device_role": 4,
+            "device_type": 25,
+            "primary_ip4": null,
+            "primary_ip6": null,
+            "vc_position": null,
+            "vc_priority": null,
+            "last_updated": "2019-11-21T16:13:23.492Z",
+            "custom_fields": {},
+            "virtual_chassis": null,
+            "local_context_data": null
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 83,
+    "fields": {
+        "time": "2019-11-21T16:13:31.600Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "985b8ba8-22ae-40f3-9150-da10959fc43d",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "device"
+        ],
+        "changed_object_id": 5,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "dc1-edge1",
+        "object_data": {
+            "face": 0,
+            "name": "dc1-edge1",
+            "rack": 97,
+            "site": 67,
+            "tags": [],
+            "serial": "",
+            "status": 1,
+            "tenant": null,
+            "cluster": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "platform": 3,
+            "position": 15,
+            "asset_tag": null,
+            "device_role": 4,
+            "device_type": 25,
+            "primary_ip4": null,
+            "primary_ip6": null,
+            "vc_position": null,
+            "vc_priority": null,
+            "last_updated": "2019-11-21T16:13:31.542Z",
+            "custom_fields": {},
+            "virtual_chassis": null,
+            "local_context_data": null
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 84,
+    "fields": {
+        "time": "2019-11-21T16:13:56.219Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "4247996b-faa7-4225-8bb8-a6f9da13d2ce",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "device"
+        ],
+        "changed_object_id": 5,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "dc1-edge1",
+        "object_data": {
+            "face": 0,
+            "name": "dc1-edge1",
+            "rack": 97,
+            "site": 67,
+            "tags": [],
+            "serial": "",
+            "status": 1,
+            "tenant": null,
+            "cluster": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "platform": 3,
+            "position": 20,
+            "asset_tag": null,
+            "device_role": 4,
+            "device_type": 25,
+            "primary_ip4": null,
+            "primary_ip6": null,
+            "vc_position": null,
+            "vc_priority": null,
+            "last_updated": "2019-11-21T16:13:56.155Z",
+            "custom_fields": {},
+            "virtual_chassis": null,
+            "local_context_data": null
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 85,
+    "fields": {
+        "time": "2019-11-21T16:14:03.650Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "5a421046-d452-4ce6-b6ad-81867f4e7895",
+        "action": 2,
+        "changed_object_type": [
+            "dcim",
+            "device"
+        ],
+        "changed_object_id": 6,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "dc1-edge2",
+        "object_data": {
+            "face": 0,
+            "name": "dc1-edge2",
+            "rack": 98,
+            "site": 67,
+            "tags": [],
+            "serial": "",
+            "status": 1,
+            "tenant": null,
+            "cluster": null,
+            "created": "2019-08-02",
+            "comments": "",
+            "platform": 3,
+            "position": 20,
+            "asset_tag": null,
+            "device_role": 4,
+            "device_type": 25,
+            "primary_ip4": null,
+            "primary_ip6": null,
+            "vc_position": null,
+            "vc_priority": null,
+            "last_updated": "2019-11-21T16:14:03.587Z",
+            "custom_fields": {},
+            "virtual_chassis": null,
+            "local_context_data": null
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 86,
+    "fields": {
+        "time": "2019-11-21T16:17:42.544Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "abc2ac76-7fc8-4f32-a99f-a685fc0ee57b",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "changed_object_id": 31,
+        "related_object_type": null,
+        "related_object_id": null,
+        "object_repr": "EX9208",
+        "object_data": {
+            "slug": "ex9208",
+            "tags": [],
+            "model": "EX9208",
+            "created": "2019-11-21",
+            "comments": "",
+            "u_height": 8,
+            "part_number": "",
+            "last_updated": "2019-11-21T16:17:42.498Z",
+            "manufacturer": 13,
+            "custom_fields": {},
+            "is_full_depth": true,
+            "subdevice_role": null
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 87,
+    "fields": {
+        "time": "2019-11-21T16:17:58.480Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "6e9ae48e-2e2c-4e94-859c-d2577ac04b89",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "consoleporttemplate"
+        ],
+        "changed_object_id": 31,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 31,
+        "object_repr": "Console 0",
+        "object_data": {
+            "name": "Console 0",
+            "device_type": 31
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 88,
+    "fields": {
+        "time": "2019-11-21T16:17:58.487Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "6e9ae48e-2e2c-4e94-859c-d2577ac04b89",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "consoleporttemplate"
+        ],
+        "changed_object_id": 32,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 31,
+        "object_repr": "Console 1",
+        "object_data": {
+            "name": "Console 1",
+            "device_type": 31
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 89,
+    "fields": {
+        "time": "2019-11-21T16:18:16.013Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "2e66b36f-b072-42d1-9a0c-7a7e690c4902",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "powerporttemplate"
+        ],
+        "changed_object_id": 61,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 31,
+        "object_repr": "PEM0",
+        "object_data": {
+            "name": "PEM0",
+            "device_type": 31,
+            "maximum_draw": 2000,
+            "allocated_draw": 1500
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 90,
+    "fields": {
+        "time": "2019-11-21T16:18:16.023Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "2e66b36f-b072-42d1-9a0c-7a7e690c4902",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "powerporttemplate"
+        ],
+        "changed_object_id": 62,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 31,
+        "object_repr": "PEM1",
+        "object_data": {
+            "name": "PEM1",
+            "device_type": 31,
+            "maximum_draw": 2000,
+            "allocated_draw": 1500
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 91,
+    "fields": {
+        "time": "2019-11-21T16:18:16.032Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "2e66b36f-b072-42d1-9a0c-7a7e690c4902",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "powerporttemplate"
+        ],
+        "changed_object_id": 63,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 31,
+        "object_repr": "PEM2",
+        "object_data": {
+            "name": "PEM2",
+            "device_type": 31,
+            "maximum_draw": 2000,
+            "allocated_draw": 1500
+        }
+    }
+},
+{
+    "model": "extras.objectchange",
+    "pk": 92,
+    "fields": {
+        "time": "2019-11-21T16:18:16.042Z",
+        "user": [
+            "admin"
+        ],
+        "user_name": "admin",
+        "request_id": "2e66b36f-b072-42d1-9a0c-7a7e690c4902",
+        "action": 1,
+        "changed_object_type": [
+            "dcim",
+            "powerporttemplate"
+        ],
+        "changed_object_id": 64,
+        "related_object_type": [
+            "dcim",
+            "devicetype"
+        ],
+        "related_object_id": 31,
+        "object_repr": "PEM3",
+        "object_data": {
+            "name": "PEM3",
+            "device_type": 31,
+            "maximum_draw": 2000,
+            "allocated_draw": 1500
         }
     }
 }
