@@ -9,7 +9,7 @@ from django.contrib.postgres.fields import ArrayField, JSONField
 from django.core.exceptions import ObjectDoesNotExist, ValidationError
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
-from django.db.models import Count, Q, Sum
+from django.db.models import Count, F, ProtectedError, Q, Sum
 from django.urls import reverse
 from mptt.models import MPTTModel, TreeForeignKey
 from taggit.managers import TaggableManager
@@ -97,6 +97,8 @@ class CableTermination(models.Model):
         content_type_field='termination_b_type',
         object_id_field='termination_b_id'
     )
+
+    is_path_endpoint = True
 
     class Meta:
         abstract = True
@@ -2444,6 +2446,8 @@ class FrontPort(CableTermination, ComponentModel):
         validators=[MinValueValidator(1), MaxValueValidator(64)]
     )
 
+    is_path_endpoint = False
+
     objects = NaturalOrderingManager()
     tags = TaggableManager(through=TaggedItem)
 
@@ -2505,6 +2509,8 @@ class RearPort(CableTermination, ComponentModel):
         default=1,
         validators=[MinValueValidator(1), MaxValueValidator(64)]
     )
+
+    is_path_endpoint = False
 
     objects = NaturalOrderingManager()
     tags = TaggableManager(through=TaggedItem)
@@ -2591,7 +2597,7 @@ class DeviceBay(ComponentModel):
         # Check that the installed device is not already installed elsewhere
         if self.installed_device:
             current_bay = DeviceBay.objects.filter(installed_device=self.installed_device).first()
-            if current_bay:
+            if current_bay and current_bay != self:
                 raise ValidationError({
                     'installed_device': "Cannot install the specified device; device is already installed in {}".format(
                         current_bay
@@ -2724,6 +2730,24 @@ class VirtualChassis(ChangeLoggedModel):
                 'master': "The selected master is not assigned to this virtual chassis."
             })
 
+    def delete(self, *args, **kwargs):
+
+        # Check for LAG interfaces split across member chassis
+        interfaces = Interface.objects.filter(
+            device__in=self.members.all(),
+            lag__isnull=False
+        ).exclude(
+            lag__device=F('device')
+        )
+        if interfaces:
+            raise ProtectedError(
+                "Unable to delete virtual chassis {}. There are member interfaces which form a cross-chassis "
+                "LAG".format(self),
+                interfaces
+            )
+
+        return super().delete(*args, **kwargs)
+
     def to_csv(self):
         return (
             self.master,
@@ -2838,6 +2862,8 @@ class Cable(ChangeLoggedModel):
     def clean(self):
 
         # Validate that termination A exists
+        if not hasattr(self, 'termination_a_type'):
+            raise ValidationError('Termination A type has not been specified')
         try:
             self.termination_a_type.model_class().objects.get(pk=self.termination_a_id)
         except ObjectDoesNotExist:
@@ -2846,6 +2872,8 @@ class Cable(ChangeLoggedModel):
             })
 
         # Validate that termination B exists
+        if not hasattr(self, 'termination_b_type'):
+            raise ValidationError('Termination B type has not been specified')
         try:
             self.termination_b_type.model_class().objects.get(pk=self.termination_b_id)
         except ObjectDoesNotExist:
