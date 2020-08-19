@@ -43,6 +43,7 @@ class ChangeLogViewTest(ModelViewTestCase):
             'path': self._get_url('add'),
             'data': post_data(form_data),
         }
+        print([tag.pk for tag in Tag.objects.all()])
         print(f'request data: {request["data"]}')
         self.add_permissions('dcim.add_site')
         response = self.client.post(**request)
@@ -77,6 +78,7 @@ class ChangeLogViewTest(ModelViewTestCase):
             'path': self._get_url('edit', instance=site),
             'data': post_data(form_data),
         }
+        print([tag.pk for tag in Tag.objects.all()])
         print(f'request data: {request["data"]}')
         self.add_permissions('dcim.change_site')
         response = self.client.post(**request)
