@@ -321,6 +321,7 @@ class ViewTestCases:
                 'path': self._get_url('add'),
                 'data': post_data(self.form_data),
             }
+            print(f'request data: {request["data"]}')
             self.assertHttpStatus(self.client.post(**request), 302)
             self.assertEqual(initial_count + 1, self._get_queryset().count())
             self.assertInstanceEqual(self._get_queryset().order_by('pk').last(), self.form_data)

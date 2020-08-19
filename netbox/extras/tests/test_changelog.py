@@ -27,20 +27,23 @@ class ChangeLogViewTest(ModelViewTestCase):
         cf.save()
         cf.obj_type.set([ct])
 
+        cls.tags = cls.create_tags('Tag 1', 'Tag 2', 'Tag 3')
+        print('tags: ' + ','.join(str(tag.pk) for tag in cls.tags))
+
     def test_create_object(self):
-        tags = self.create_tags('Tag 1', 'Tag 2')
         form_data = {
             'name': 'Test Site 1',
             'slug': 'test-site-1',
             'status': SiteStatusChoices.STATUS_ACTIVE,
             'cf_my_field': 'ABC',
-            'tags': [tag.pk for tag in tags],
+            'tags': [tag.pk for tag in self.tags[:2]],
         }
 
         request = {
             'path': self._get_url('add'),
             'data': post_data(form_data),
         }
+        print(f'request data: {request["data"]}')
         self.add_permissions('dcim.add_site')
         response = self.client.post(**request)
         self.assertHttpStatus(response, 302)
@@ -60,21 +63,21 @@ class ChangeLogViewTest(ModelViewTestCase):
     def test_update_object(self):
         site = Site(name='Test Site 1', slug='test-site-1')
         site.save()
-        tags = self.create_tags('Tag 1', 'Tag 2', 'Tag 3')
-        site.tags.set('Tag 1', 'Tag 2')
+        site.tags.set(*list(self.tags[:2]))
 
         form_data = {
             'name': 'Test Site X',
             'slug': 'test-site-x',
             'status': SiteStatusChoices.STATUS_PLANNED,
             'cf_my_field': 'DEF',
-            'tags': [tags[2].pk],
+            'tags': [self.tags[2].pk],
         }
 
         request = {
             'path': self._get_url('edit', instance=site),
             'data': post_data(form_data),
         }
+        print(f'request data: {request["data"]}')
         self.add_permissions('dcim.change_site')
         response = self.client.post(**request)
         self.assertHttpStatus(response, 302)
@@ -96,8 +99,7 @@ class ChangeLogViewTest(ModelViewTestCase):
             slug='test-site-1'
         )
         site.save()
-        self.create_tags('Tag 1', 'Tag 2')
-        site.tags.set('Tag 1', 'Tag 2')
+        site.tags.set(*list(self.tags[:2]))
         CustomFieldValue.objects.create(
             field=CustomField.objects.get(name='my_field'),
             obj=site,
