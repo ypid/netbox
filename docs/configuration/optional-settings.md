@@ -318,7 +318,7 @@ NetBox will use these credentials when authenticating to remote devices via the 
 
 ## NAPALM_ARGS
 
-A dictionary of optional arguments to pass to NAPALM when instantiating a network driver. See the NAPALM documentation for a [complete list of optional arguments](http://napalm.readthedocs.io/en/latest/support/#optional-arguments). An example:
+A dictionary of optional arguments to pass to NAPALM when instantiating a network driver. See the NAPALM documentation for a [complete list of optional arguments](https://napalm.readthedocs.io/en/latest/support/#optional-arguments). An example:
 
 ```python
 NAPALM_ARGS = {

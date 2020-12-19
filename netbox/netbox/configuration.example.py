@@ -183,7 +183,7 @@ NAPALM_PASSWORD = ''
 # NAPALM timeout (in seconds). (Default: 30)
 NAPALM_TIMEOUT = 30
 
-# NAPALM optional arguments (see http://napalm.readthedocs.io/en/latest/support/#optional-arguments). Arguments must
+# NAPALM optional arguments (see https://napalm.readthedocs.io/en/latest/support/#optional-arguments). Arguments must
 # be provided as a dictionary.
 NAPALM_ARGS = {}
 
