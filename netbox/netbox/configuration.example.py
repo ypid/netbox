@@ -79,7 +79,7 @@ BANNER_BOTTOM = ''
 # Text to include on the login page above the login form. HTML is allowed.
 BANNER_LOGIN = ''
 
-# Base URL path if accessing NetBox within a directory. For example, if installed at http://example.com/netbox/, set:
+# Base URL path if accessing NetBox within a directory. For example, if installed at https://example.com/netbox/, set:
 # BASE_PATH = 'netbox/'
 BASE_PATH = ''
 

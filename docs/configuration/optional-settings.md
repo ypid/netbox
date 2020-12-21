@@ -44,7 +44,7 @@ This defines custom content to be displayed on the login page above the login fo
 
 Default: None
 
-The base URL path to use when accessing NetBox. Do not include the scheme or domain name. For example, if installed at http://example.com/netbox/, set:
+The base URL path to use when accessing NetBox. Do not include the scheme or domain name. For example, if installed at https://example.com/netbox/, set:
 
 ```python
 BASE_PATH = 'netbox/'
