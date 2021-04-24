@@ -160,7 +160,7 @@ LOGIN_TIMEOUT = None
 # Setting this to True will display a "maintenance mode" banner at the top of every page.
 MAINTENANCE_MODE = False
 
-# The URL to use when mapping physical addresses or GPS coordinates
+# The URL to use when mapping physical addresses or GPS coordinates.
 MAPS_URL = 'https://maps.google.com/?q='
 
 # An API consumer can request an arbitrary number of objects =by appending the "limit" parameter to the URL (e.g.
